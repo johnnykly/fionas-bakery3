@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-27T20:00:00+00:00",
+  "title": "Design System: Fiona's Bakery",
+  "extensions": {
+    "colorMeta": {
+      "berry": {
+        "role": "primary",
+        "displayName": "Berry Gel",
+        "canonical": "#B22A47",
+        "oklch": "oklch(50.9% 0.171 14.0)",
+        "tonalRamp": [
+          "#200004",
+          "#4B0215",
+          "#7E0429",
+          "#AC2443",
+          "#D44C62",
+          "#FD7184",
+          "#FEB2B7",
+          "#FEE8E9"
+        ]
+      },
+      "berry-deep": {
+        "role": "primary",
+        "displayName": "Deep Berry",
+        "canonical": "#8E1C36",
+        "oklch": "oklch(42.8% 0.148 13.8)",
+        "tonalRamp": [
+          "#200004",
+          "#4B0215",
+          "#7E0429",
+          "#A43347",
+          "#CB5667",
+          "#F37A89",
+          "#FEB2B8",
+          "#FEE8EA"
+        ]
+      },
+      "plum": {
+        "role": "neutral",
+        "displayName": "Plum Ink",
+        "canonical": "#2E2446",
+        "oklch": "oklch(28.9% 0.061 295.9)",
+        "tonalRamp": [
+          "#0E0421",
+          "#281E3F",
+          "#453B5F",
+          "#645A81",
+          "#857BA4",
+          "#A89EC8",
+          "#CCC2ED",
+          "#F0EBFE"
+        ]
+      },
+      "plum-soft": {
+        "role": "neutral",
+        "displayName": "Soft Plum",
+        "canonical": "#463B5E",
+        "oklch": "oklch(37.9% 0.060 297.9)",
+        "tonalRamp": [
+          "#0F0420",
+          "#291E3E",
+          "#463B5E",
+          "#655A7F",
+          "#867BA2",
+          "#A99DC6",
+          "#CDC1EC",
+          "#F0EBFF"
+        ]
+      },
+      "sugar": {
+        "role": "neutral",
+        "displayName": "Sugar",
+        "canonical": "#FFFCFB",
+        "oklch": "oklch(99.3% 0.003 39.5)",
+        "tonalRamp": [
+          "#0D0B0A",
+          "#272424",
+          "#444141",
+          "#636160",
+          "#848281",
+          "#A7A4A3",
+          "#CBC8C7",
+          "#F1EEED"
+        ],
+        "occasions": [
+          "alla"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Plum",
+        "canonical": "#6A5F80",
+        "oklch": "oklch(50.9% 0.053 299.8)",
+        "tonalRamp": [
+          "#0F051E",
+          "#291F3B",
+          "#463B5A",
+          "#665B7B",
+          "#877C9E",
+          "#AA9EC2",
+          "#CEC2E7",
+          "#F1EBFF"
+        ]
+      },
+      "rose": {
+        "role": "paste",
+        "displayName": "Rose Paste",
+        "canonical": "#F8D8DC",
+        "oklch": "oklch(91.0% 0.036 9.3)",
+        "tonalRamp": [
+          "#170508",
+          "#341E21",
+          "#533A3E",
+          "#74595D",
+          "#967A7E",
+          "#BA9CA0",
+          "#DFC0C4",
+          "#FFE8EB"
+        ],
+        "occasions": [
+          "brollop",
+          "sockerblommor"
+        ]
+      },
+      "butter": {
+        "role": "paste",
+        "displayName": "Butter Paste",
+        "canonical": "#FBEBB6",
+        "oklch": "oklch(94.0% 0.070 93.3)",
+        "tonalRamp": [
+          "#100A00",
+          "#2E2401",
+          "#4F410C",
+          "#6F602F",
+          "#918250",
+          "#B4A572",
+          "#D8C995",
+          "#FEEEB9"
+        ],
+        "occasions": [
+          "barn",
+          "fest"
+        ]
+      },
+      "pistachio": {
+        "role": "paste",
+        "displayName": "Pistachio Paste",
+        "canonical": "#DDEBCD",
+        "oklch": "oklch(92.2% 0.043 127.7)",
+        "tonalRamp": [
+          "#060E00",
+          "#1F2911",
+          "#3B462E",
+          "#5A664C",
+          "#7B886C",
+          "#9DAB8E",
+          "#C1CFB2",
+          "#E6F4D6"
+        ],
+        "occasions": [
+          "student",
+          "bakelser-foretag"
+        ]
+      },
+      "rose-gel": {
+        "role": "gel-ring",
+        "displayName": "Rose Gel",
+        "canonical": "#E08595",
+        "oklch": "oklch(71.8% 0.113 9.0)",
+        "tonalRamp": [
+          "#200006",
+          "#4B011A",
+          "#712135",
+          "#954254",
+          "#BB6474",
+          "#E18696",
+          "#FEB1BD",
+          "#FEE8EB"
+        ]
+      },
+      "butter-gel": {
+        "role": "gel-ring",
+        "displayName": "Butter Gel",
+        "canonical": "#DDAF3F",
+        "oklch": "oklch(77.6% 0.136 85.8)",
+        "tonalRamp": [
+          "#120A00",
+          "#312301",
+          "#543E02",
+          "#795C10",
+          "#A27C17",
+          "#CB9E28",
+          "#F1C255",
+          "#FFEDC7"
+        ]
+      },
+      "pistachio-gel": {
+        "role": "gel-ring",
+        "displayName": "Pistachio Gel",
+        "canonical": "#8DB272",
+        "oklch": "oklch(72.0% 0.097 132.8)",
+        "tonalRamp": [
+          "#040F00",
+          "#162C01",
+          "#2C4C0C",
+          "#4B6D2F",
+          "#6B8F50",
+          "#8DB272",
+          "#B1D795",
+          "#D5FDBA"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Paste Line",
+        "canonical": "rgba(46,36,70,.14)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "h1 page titles; home hero uses clamp(2.5rem,5vw,4.4rem)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "h2 section heads inside slabs, text-wrap: balance."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3 step, price-row and flavour-group heads."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Prices and estimates; tabular, animated by the 520ms ticker."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Section openers, max 36em."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, 17px/1.65 plum."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, legends, small sentence-case sub-heads. Never uppercase, never an eyebrow."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lift",
+        "value": "0 22px 44px -26px rgba(46,36,70,.38), 0 3px 8px -4px rgba(46,36,70,.12)",
+        "purpose": "The only elevation: a slab or object that overlaps or floats."
+      },
+      {
+        "name": "crumb",
+        "value": "0 6px 14px -10px rgba(46,36,70,.6)",
+        "purpose": "Tags and gallery tile names."
+      },
+      {
+        "name": "pot-drop",
+        "value": "0 8px 16px -10px rgba(46,36,70,.5)",
+        "purpose": "Under colour pots."
+      },
+      {
+        "name": "berry-glow",
+        "value": "0 12px 24px -14px rgba(178,42,71,.7)",
+        "purpose": "Under the gel button only."
+      },
+      {
+        "name": "focus-field",
+        "value": "inset 0 0 0 2px #B22A47, 0 0 0 4px rgba(178,42,71,.15)",
+        "purpose": "Focused text fields."
+      },
+      {
+        "name": "pot-selected",
+        "value": "inset 0 0 0 5px var(--g), 0 0 0 3px #FFFCFB, 0 0 0 5.5px #2E2446",
+        "purpose": "Selected colour pot."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Expo-out ease for every transition."
+      },
+      {
+        "name": "retint",
+        "value": "700ms",
+        "purpose": "Paste background swap when an occasion is chosen (hero, order card, gallery head)."
+      },
+      {
+        "name": "state",
+        "value": "250–350ms",
+        "purpose": "Buttons, tabs, chips, pots hover/selection."
+      },
+      {
+        "name": "ticker",
+        "value": "520ms, 1 - 2^(-10p)",
+        "purpose": "Numeric count-up for prices and estimates; instant under reduced motion."
+      },
+      {
+        "name": "hero-photo-swap",
+        "value": "opacity 600ms, scale 1.03→1 over 1.2s",
+        "purpose": "Hero photo crossfade on occasion change."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce → transitions and animations off",
+        "purpose": "Global guard."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "600px"
+      },
+      {
+        "name": "stack",
+        "value": "900px"
+      },
+      {
+        "name": "order-stack",
+        "value": "980px"
+      },
+      {
+        "name": "narrow",
+        "value": "520px"
+      }
+    ],
+    "occasionMap": {
+      "brollop": "rose",
+      "sockerblommor": "rose",
+      "barn": "butter",
+      "fest": "butter",
+      "student": "pistachio",
+      "bakelser-foretag": "pistachio",
+      "alla": "sugar"
+    },
+    "fonts": [
+      {
+        "family": "Caprasimo",
+        "files": [
+          "fonts/caprasimo.woff2"
+        ],
+        "weights": "400"
+      },
+      {
+        "family": "Figtree",
+        "files": [
+          "fonts/figtree.woff2",
+          "fonts/figtree-italic.woff2"
+        ],
+        "weights": "400-700, italic 400"
+      }
+    ],
+    "theme": "single light theme by design (color-scheme: light)",
+    "notCanonized": [
+      {
+        "item": "Short-notice warning as a solid berry band (sugar text)",
+        "reason": "Recorded craft-floor deviation: berry fills are reserved for actions; kept only for this interrupting order-form warning and not to be reused for other notices."
+      }
+    ],
+    "heroTintPairs": {
+      "brollop": [
+        "rose",
+        "pistachio"
+      ],
+      "barn": [
+        "butter",
+        "rose"
+      ],
+      "fest": [
+        "butter",
+        "pistachio"
+      ],
+      "student": [
+        "pistachio",
+        "rose"
+      ],
+      "bakelser-foretag": [
+        "pistachio",
+        "butter"
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Gel Button",
+      "kind": "button",
+      "refersTo": "button-gel",
+      "description": "Primary action pill in berry; \"Beställ tårta\".",
+      "html": "<button class=\"ds-btn ds-btn-gel\">Beställ tårta <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--text);border-radius:999px;padding:1em 1.5em;border:2px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)} .ds-btn svg{transition:transform .3s var(--ease)} .ds-btn:hover svg{transform:translateX(3px)} .ds-btn:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-btn-gel{background:var(--berry);color:var(--sugar);box-shadow:0 12px 24px -14px rgba(178,42,71,.7)} .ds-btn-gel:hover{background:var(--berry-deep);transform:translateY(-2px)}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary pill with plum outline; fills plum on hover.",
+      "html": "<button class=\"ds-btn ds-btn-line\">Se alla tårtor</button>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--text);border-radius:999px;padding:1em 1.5em;border:2px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease)} .ds-btn:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-btn-line{background:transparent;color:var(--plum);border-color:var(--plum)} .ds-btn-line:hover{background:var(--plum);color:var(--sugar)}"
+    },
+    {
+      "name": "Paste-Pill Nav Tabs",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "Each tab in its page paste; current page gets a gel ring; Beställ is always berry.",
+      "html": "<ul class=\"ds-tabs\"><li style=\"--c:var(--rose);--g:var(--rose-gel)\"><a href=\"#\" aria-current=\"page\">Tårtor</a></li><li style=\"--c:var(--butter);--g:var(--butter-gel)\"><a href=\"#\">Smaker &amp; priser</a></li><li style=\"--c:var(--pistachio);--g:var(--pistachio-gel)\"><a href=\"#\">Om Fiona</a></li><li style=\"--c:var(--rose);--g:var(--rose-gel)\"><a href=\"#\">Frågor</a></li><li><a href=\"#\" class=\"ds-tab-order\">Beställ</a></li></ul>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-tabs{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;font-family:var(--text)} .ds-tabs a{display:block;text-decoration:none;color:var(--plum);font-weight:500;font-size:.96rem;line-height:1;padding:.8em 1.15em;border-radius:999px;background:var(--c,var(--sugar));transition:box-shadow .25s var(--ease),transform .25s var(--ease)} .ds-tabs a:hover{box-shadow:inset 0 0 0 2px var(--g);transform:translateY(-1px)} .ds-tabs a[aria-current=page]{box-shadow:inset 0 0 0 2.5px var(--g);font-weight:700} .ds-tabs a:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-tabs .ds-tab-order{background:var(--berry);color:var(--sugar);font-weight:600} .ds-tabs .ds-tab-order:hover{background:var(--berry-deep);box-shadow:none}"
+    },
+    {
+      "name": "Colour Pots",
+      "kind": "custom",
+      "refersTo": "colour-pot",
+      "description": "Signature occasion swatch-controls; paste fill, gel ring, plum selection ring.",
+      "html": "<ul class=\"ds-pots\"><li><button class=\"ds-pot\" style=\"--c:var(--rose);--g:var(--rose-gel)\" aria-pressed=\"true\"><i></i>Bröllop</button></li><li><button class=\"ds-pot\" style=\"--c:var(--rose);--g:var(--rose-gel)\" aria-pressed=\"false\"><i></i>Sockerblommor</button></li><li><button class=\"ds-pot\" style=\"--c:var(--butter);--g:var(--butter-gel)\" aria-pressed=\"false\"><i></i>Barnkalas &amp; dop</button></li><li><button class=\"ds-pot\" style=\"--c:var(--butter);--g:var(--butter-gel)\" aria-pressed=\"false\"><i></i>Födelsedag</button></li><li><button class=\"ds-pot\" style=\"--c:var(--pistachio);--g:var(--pistachio-gel)\" aria-pressed=\"false\"><i></i>Student</button></li><li><button class=\"ds-pot\" style=\"--c:var(--pistachio);--g:var(--pistachio-gel)\" aria-pressed=\"false\"><i></i>Företag &amp; event</button></li></ul>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-pots{display:flex;flex-wrap:wrap;gap:10px 18px;list-style:none;margin:0;padding:0} .ds-pot{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;padding:4px;cursor:pointer;font:500 .88rem/1.25 var(--text);color:var(--plum);text-align:center;max-width:96px} .ds-pot i{display:block;width:48px;height:48px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 5px var(--g),0 8px 16px -10px rgba(46,36,70,.5);transition:transform .35s var(--ease),box-shadow .35s var(--ease)} .ds-pot:hover i{transform:translateY(-3px)} .ds-pot[aria-pressed=true]{font-weight:700} .ds-pot[aria-pressed=true] i{box-shadow:inset 0 0 0 5px var(--g),0 0 0 3px var(--sugar),0 0 0 5.5px var(--plum)} .ds-pot:focus-visible{outline:none} .ds-pot:focus-visible i{outline:2.5px solid var(--berry);outline-offset:6px}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Sugar pill with a gel dot, laid over photos.",
+      "html": "<span class=\"ds-tag\" style=\"--g:var(--rose-gel)\">Sockerblommor</span> <span class=\"ds-tag\" style=\"--g:var(--butter-gel)\">Modellerade figurer</span>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-tag{display:inline-flex;align-items:center;gap:6px;background:var(--sugar);color:var(--plum);font:600 .78rem/1 var(--text);padding:.55em .8em;border-radius:999px;box-shadow:0 6px 14px -10px rgba(46,36,70,.6)} .ds-tag::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--g,var(--rose-gel))}"
+    },
+    {
+      "name": "Flavour Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Selectable pill; paste-line ring at rest, plum fill when selected.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Vanilj</button><button class=\"ds-chip\" aria-pressed=\"false\">Choklad</button><button class=\"ds-chip\" aria-pressed=\"false\">Hallon <small>+5 kr</small></button></div>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-chips{display:flex;flex-wrap:wrap;gap:8px} .ds-chip{border:0;background:var(--sugar);box-shadow:inset 0 0 0 1.5px var(--line);color:var(--plum);font:500 .95rem var(--text);padding:.65em 1em;border-radius:999px;cursor:pointer;transition:background-color .25s var(--ease),box-shadow .25s var(--ease)} .ds-chip:hover{box-shadow:inset 0 0 0 1.5px var(--plum)} .ds-chip:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-chip[aria-pressed=true]{background:var(--plum);color:var(--sugar);box-shadow:none} .ds-chip small{opacity:.75;margin-left:4px}"
+    },
+    {
+      "name": "Paste Slab with Lifted Overlap",
+      "kind": "card",
+      "refersTo": "slab",
+      "description": "The container: a paste slab, with a second slab overlapping and lifted. No boxed cards.",
+      "html": "<div class=\"ds-stage\"><div class=\"ds-slab\" style=\"--c:var(--rose)\"><h3>Tårtor för bröllop, kalas och allt däremellan</h3><p>60 kr per bit. Beställ minst två veckor innan.</p></div><div class=\"ds-slab ds-lift\" style=\"--c:var(--pistachio)\"><div class=\"ds-inner\"></div></div></div>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-stage{display:grid;grid-template-columns:repeat(12,1fr);font:400 17px/1.65 var(--text);color:var(--plum)} .ds-slab{background:var(--c);border-radius:var(--r-slab);padding:clamp(24px,5vw,48px)} .ds-stage>.ds-slab:first-child{grid-column:1/span 8;grid-row:1;padding-right:18%} .ds-slab h3{font:400 clamp(1.6rem,3vw,2.4rem)/1.02 var(--display);letter-spacing:-.015em;margin:0 0 12px} .ds-slab p{margin:0} .ds-lift{grid-column:7/span 6;grid-row:1;margin-top:64px;padding:14px;box-shadow:var(--lift);z-index:2} .ds-inner{border-radius:var(--r-inner);background:var(--sugar);aspect-ratio:4/3}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Sugar field with hairline ring; berry ring and halo on focus.",
+      "html": "<label class=\"ds-field\"><span>Datum</span><input placeholder=\"t.ex. 14 juni\"></label>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-field{display:grid;gap:8px;font:700 1rem var(--text);color:var(--plum);max-width:320px} .ds-field input{font:500 1rem var(--text);color:var(--plum);background:var(--sugar);border:0;border-radius:14px;padding:.9em 1em;box-shadow:inset 0 0 0 1.5px rgba(46,36,70,.12);transition:box-shadow .2s} .ds-field input:hover{box-shadow:inset 0 0 0 1.5px rgba(46,36,70,.3)} .ds-field input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--berry),0 0 0 4px rgba(178,42,71,.15)} .ds-field input::placeholder{color:#6A5F80}"
+    },
+    {
+      "name": "Estimate Numeral",
+      "kind": "custom",
+      "description": "Caprasimo tabular price that ticks (520ms expo-out) as inputs change.",
+      "html": "<div class=\"ds-big\">1 800<small>kr</small></div>",
+      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-big{font:400 clamp(3rem,6vw,4.6rem)/.95 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--plum)} .ds-big small{font:600 1rem var(--text);letter-spacing:0;margin-left:.3em;color:var(--plum-soft)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Färgburkarna",
+    "overview": "**Creative North Star: \"Färgburkarna\"**\n\nThe site is tinted like Fiona's sugarpaste. Every region of a page is a rolled slab of light paste (rose, butter, pistachio, or sugar white) with softly rounded edges, laid on a sugar ground with narrow seams between slabs. Deep gel colours carry everything that must be read or pressed: plum ink for type, berry for actions. The colour pots (round swatches ringed with the deeper gel drop of their paste) are both the palette and the control: each occasion belongs to one of three paste families, and choosing an occasion re-tints the page.\n\nHierarchy comes from overlap, not from boxes. A photo slab lifts over the edge of a text slab; a range of cake slabs steps down across a pistachio ground and spills into the next section. The only elevation in the world is that lift. Romance (bröllop, sockerblommor) and play (barnkalas, student, fest) share one palette, so the site is never wedding-only and never childish.\n\nThe world is single-theme and light by design: paste is pale, ink is deep, and there is no dark mode to maintain. The one dark surface is the plum footer slab, which reads as the gel bottle rather than a theme.",
+    "keyCharacteristics": [
+      "Whole-region paste slabs (radius clamp(22px,3vw,40px)) separated by 12–20px seams, never full-bleed white sections.",
+      "Plum ink and berry actions; paste colours are grounds, never text.",
+      "Three paste families (rose, butter, pistachio); the occasion → family mapping is fixed and drives live re-tinting.",
+      "Colour pots, paste-pill nav tabs with a gel-ring current state, and pill buttons are the component family.",
+      "Overlap and one soft lift shadow are the only depth.",
+      "Caprasimo display over Figtree text, both self-hosted."
+    ],
+    "rules": [
+      {
+        "name": "The Occasion Owns Its Family Rule",
+        "body": "Three paste families carry every occasion: rose is bröllop and sockerblommor, butter is barn/dop and fest/födelsedag, pistachio is student and bakelser/företag; \"alla\" falls back to sugar pots and a rose head. Never reassign an occasion's family on a new surface and never add a fourth paste. Adjacent slabs never share a colour: a re-tinted surface pairs its tint with a different family (`--tint` / `--tint-2`: bröllop rose/pistachio, barn butter/rose, fest butter/pistachio, student pistachio/rose, företag pistachio/butter), and page slab sequences alternate (home: rose, pistachio, butter, rose, pistachio). Interactions re-tint by swapping `--tint` / `--tint-2` (home hero, order card) or `--c` (gallery page head).",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Carries, Paste Grounds Rule",
+        "body": "Text and actions are always plum or berry on paste or sugar. Paste and gel colours are never used for text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gel Is A Ring Rule",
+        "body": "Gel colours appear as rings, dots and tracks, never as filled slabs or buttons.",
+        "section": "colors"
+      },
+      {
+        "name": "The Numbers Are Icing Rule",
+        "body": "Every price, count and estimate is set in Caprasimo with tabular figures and changes by ticking (520ms, exponential ease-out; instant under reduced motion), never by jumping.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "Headings stand alone. No kicker, eyebrow or uppercase tracked label above a heading; small sub-heads are sentence-case Figtree.",
+        "section": "typography"
+      },
+      {
+        "name": "The Seam Rule",
+        "body": "Between slabs, show 12–20px of sugar ground. Never butt slabs together edge to edge and never use a white full-bleed section as a separator.",
+        "section": "layout"
+      },
+      {
+        "name": "The Only Lift Rule",
+        "body": "The lift shadow means \"this sits on top of something\". Never put it on a slab that does not overlap or float, and never use borders or boxed cards to create hierarchy.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do build every region as a paste slab (`--c` paste + `--g` gel) on the sugar ground with a 12–20px seam.",
+      "Do use the three-family occasion map (rose: bröllop, sockerblommor; butter: barn, fest; pistachio: student, bakelser/företag) wherever an occasion appears, and keep adjacent slabs in different families.",
+      "Do create hierarchy by overlapping slabs and lifting the top one with the lift shadow.",
+      "Do set type and actions in plum and berry; set every price in Caprasimo with tabular figures and tick it.",
+      "Do keep controls round: pill buttons, paste-pill tabs, colour pots, dotted tags.",
+      "Do honour reduced motion: re-tints, ticks and hover lifts collapse to instant."
+    ],
+    "donts": [
+      "Don't use eyebrows, kickers or uppercase tracked labels above headings.",
+      "Don't use boxed cards or bordered panels to structure content. A single 1.5px paste-line hairline is allowed only to set a sub-part apart inside a slab (the hero's occasion picker, the footer fine print).",
+      "Don't use stripes, gradients or patterned fills on slabs; paste is a flat colour. (The range slider's hard-stop fill is a control track, not a surface.)",
+      "Don't separate sections with full-bleed white bands.",
+      "Don't fill a surface with a gel colour or set text in a paste or gel colour.",
+      "Don't add a dark theme; the world is single light by design.",
+      "Don't extend the solid berry warning band to other notices."
+    ]
+  }
+}

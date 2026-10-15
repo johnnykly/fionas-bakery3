@@ -1,0 +1,1039 @@
+<title>Fiona's Bakery</title>
+<meta name="description" content="Beställ tårta i Malmö och Arlöv. Bröllopstårtor med handgjorda sockerblommor, barntårtor, födelsedagstårtor, studenttårtor och cupcakes med logga. Från 60 kr/bit.">
+<link rel="preload" href="fonts/caprasimo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Fiona's Bakery: sugarpaste world.
+   Grounds are rolled paste slabs; type and actions are deep gel colour. */
+@font-face{font-family:"Caprasimo";src:url(fonts/caprasimo.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Figtree";src:url(fonts/figtree.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Figtree";src:url(fonts/figtree-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+:root{
+  color-scheme:light;
+  /* paste slabs */
+  --sugar:#FFFCFB;
+  --rose:#F8D8DC;
+  --butter:#FBEBB6;
+  --pistachio:#DDEBCD;
+  /* gel rings (a deeper drop of each paste) */
+  --rose-gel:#E08595;
+  --butter-gel:#DDAF3F;
+  --pistachio-gel:#8DB272;
+  /* ink and action */
+  --plum:#2E2446;
+  --plum-soft:#463B5E;
+  --berry:#B22A47;
+  --berry-deep:#8E1C36;
+  --line:rgba(46,36,70,.14);
+  --lift:0 22px 44px -26px rgba(46,36,70,.38), 0 3px 8px -4px rgba(46,36,70,.12);
+
+  --display:"Caprasimo","Cooper Black","Georgia",serif;
+  --text:"Figtree","Avenir Next","Segoe UI",system-ui,sans-serif;
+
+  --r-slab:clamp(22px,3vw,40px);
+  --r-inner:clamp(16px,2vw,26px);
+  --gutter:clamp(16px,4vw,40px);
+  --max:1240px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --tint:var(--rose);
+  --tint-2:var(--pistachio);
+  --fs-caption:.82rem;
+  --fs-small:.94rem;
+  --fs-subtitle:1.3rem;
+  --r-field:14px;
+  --r-layer:18px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--sugar);scroll-behavior:smooth;scrollbar-color:var(--rose-gel) var(--sugar);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sugar);color:var(--plum);font:400 17px/1.65 var(--text);-webkit-font-smoothing:antialiased;caret-color:var(--berry)}
+::selection{background:var(--rose);color:var(--plum)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--berry);text-underline-offset:.22em;text-decoration-thickness:1.5px}
+a:hover{color:var(--berry-deep)}
+:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;letter-spacing:-.015em;margin:0;text-wrap:balance;color:var(--plum)}
+h1{font-size:clamp(2.6rem,6.2vw,5.4rem)}
+h2{font-size:clamp(2rem,4.2vw,3.4rem)}
+h3{font-size:clamp(1.35rem,2vw,1.7rem)}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.measure{max-width:36em}
+.lede{font-size:clamp(1.06rem,1.4vw,1.2rem);color:var(--plum-soft)}
+.num{font-variant-numeric:tabular-nums}
+.icon{width:1.15em;height:1.15em;flex:none;fill:currentColor}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- actions ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--text);text-decoration:none;border-radius:999px;padding:1em 1.5em;border:2px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+.btn-gel{background:var(--berry);color:var(--sugar);box-shadow:0 12px 24px -14px rgba(178,42,71,.7)}
+.btn-gel:hover{background:var(--berry-deep);color:var(--sugar);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--plum);border-color:var(--plum)}
+.btn-line:hover{background:var(--plum);color:var(--sugar)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn .ico{display:grid;place-items:center;width:30px;height:30px;margin:-.45em -.8em -.45em .1em;border-radius:50%;background:rgba(255,252,251,.2);transition:transform .45s var(--ease),background-color .3s var(--ease)}
+.btn .ico .icon{width:16px;height:16px}
+.btn-line .ico{background:rgba(46,36,70,.08)}
+.btn-line:hover .ico{background:rgba(255,252,251,.2)}
+.btn:hover .ico{transform:translateX(2px) scale(1.06)}
+.btn:active{transform:translateY(1px) scale(.98)}
+.pot:active i{transform:scale(.94)}
+.chip:active,.tabs a:active,.stepper button:active{transform:scale(.96)}
+.go{display:inline-flex;align-items:center;gap:.45em;font-weight:600;text-decoration:none}
+.go .ico{display:inline-grid}
+.go:hover .ico{transform:translateX(3px)}
+.go .ico{transition:transform .3s var(--ease)}
+
+/* ---------- header ---------- */
+.site-head{position:relative;z-index:30;padding-top:18px}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--plum)}
+.brand svg{width:44px;height:44px;flex:none}
+.brand b{font:400 1.55rem/1 var(--display);letter-spacing:-.01em;display:block}
+.brand small{display:block;font:500 var(--fs-caption)/1 var(--text);color:var(--plum-soft);margin-top:4px;letter-spacing:.02em}
+.rose-mark .petal{fill:none;stroke:var(--berry);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rose-mark .leaf{fill:var(--pistachio-gel);stroke:none}
+.rose-mark .stem{fill:none;stroke:var(--pistachio-gel);stroke-width:2;stroke-linecap:round}
+.rose-mark .bloom{fill:var(--rose)}
+.tabs{display:flex;align-items:center;gap:8px;list-style:none;margin:0;padding:0}
+.tabs li{display:flex}
+.tabs a{display:flex;align-items:center;min-height:44px;text-decoration:none;color:var(--plum);font-weight:500;font-size:var(--fs-small);line-height:1;padding:.8em 1.15em;border-radius:999px;background:var(--c,var(--sugar));transition:box-shadow .25s var(--ease),transform .25s var(--ease)}
+.tabs a:hover{box-shadow:inset 0 0 0 2px var(--g);transform:translateY(-1px)}
+.tabs a[aria-current="page"]{box-shadow:inset 0 0 0 2.5px var(--g);font-weight:700}
+.tabs .tab-order{background:var(--berry);color:var(--sugar);font-weight:600}
+.tabs .tab-order:hover{background:var(--berry-deep);box-shadow:none}
+.tabs .tab-order[aria-current="page"]{background:var(--berry-deep);box-shadow:inset 0 0 0 2.5px var(--rose)}
+.menu-btn{display:none;align-items:center;gap:8px;background:var(--sugar);border:0;box-shadow:var(--lift);border-radius:999px;padding:.75em 1.1em;font:600 var(--fs-small) var(--text);color:var(--plum);cursor:pointer}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .tabs{display:none;position:absolute;left:var(--gutter);right:var(--gutter);top:calc(100% + 10px);flex-direction:column;align-items:stretch;border-radius:var(--r-slab);padding:12px;background:var(--sugar);box-shadow:var(--lift)}
+  .tabs li{display:block}
+  .tabs.open{display:flex}
+  .tabs a{padding:.9em 1.1em;font-size:1.05rem}
+}
+
+/* ---------- slabs ---------- */
+.slab{background:var(--c,var(--rose));border-radius:var(--r-slab);padding:clamp(24px,5vw,64px);position:relative}
+.slab.lift{box-shadow:var(--lift)}
+.c-rose{--c:var(--rose);--g:var(--rose-gel)}
+.c-butter{--c:var(--butter);--g:var(--butter-gel)}
+.c-pistachio{--c:var(--pistachio);--g:var(--pistachio-gel)}
+.c-sugar{--c:var(--sugar);--g:var(--plum)}
+section{margin-block:clamp(12px,1.6vw,20px)}
+.seam-top{margin-top:clamp(12px,1.6vw,20px)}
+
+/* ---------- colour pots ---------- */
+.pots{display:flex;flex-wrap:wrap;gap:10px 18px;list-style:none;margin:0;padding:0}
+.pot{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;padding:4px;cursor:pointer;font:500 var(--fs-small)/1.25 var(--text);color:var(--plum);text-align:center;max-width:96px}
+.pot i{display:block;width:48px;height:48px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 5px var(--g),0 8px 16px -10px rgba(46,36,70,.5);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.pot:hover i{transform:translateY(-3px)}
+.pot[aria-pressed="true"] i,.pot input:checked+i{box-shadow:inset 0 0 0 5px var(--g),0 0 0 3px var(--sugar),0 0 0 5.5px var(--plum)}
+.pot[aria-pressed="true"],.pot:has(input:checked){font-weight:700}
+.pot input{position:absolute;opacity:0;pointer-events:none}
+.pot:has(input:focus-visible) i{outline:2.5px solid var(--berry);outline-offset:6px}
+
+/* ---------- tags ---------- */
+.tag{display:inline-flex;align-items:center;gap:6px;background:var(--sugar);color:var(--plum);font:600 var(--fs-caption)/1 var(--text);padding:.55em .8em;border-radius:999px;box-shadow:0 6px 14px -10px rgba(46,36,70,.6)}
+.tag::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--g,var(--rose-gel))}
+
+/* ---------- HOME: opening ---------- */
+.opening{margin-top:clamp(20px,3vw,36px);display:grid;grid-template-columns:repeat(12,1fr);align-items:start}
+.opening .words{grid-column:1 / span 8;min-width:0;grid-row:1;background:var(--tint);transition:background-color .7s var(--ease);padding:clamp(28px,5vw,64px);padding-right:calc(clamp(28px,4vw,56px) + 12%);padding-top:clamp(28px,4vw,52px);padding-bottom:clamp(24px,3vw,36px);min-height:100%}
+.opening h1{margin-bottom:20px;font-size:clamp(2.5rem,5vw,4.4rem)}
+.opening .lede{color:var(--plum)}
+.opening .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.opening .facts{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:26px;font-weight:500;font-size:var(--fs-small)}
+.opening .facts span{display:inline-flex;align-items:center;gap:7px}
+.opening .picker{margin-top:clamp(24px,3vw,36px);padding-top:18px;border-top:1.5px solid rgba(46,36,70,.14)}
+.opening .picker h2{font:600 1rem/1.2 var(--text);letter-spacing:0;margin-bottom:14px}
+.opening .photo{grid-column:7 / span 6;grid-row:1;margin-top:clamp(48px,7vw,96px);background:var(--tint-2);transition:background-color .7s var(--ease);padding:clamp(12px,1.6vw,20px);box-shadow:var(--lift);z-index:2}
+.opening .photo .frame{position:relative;border-radius:var(--r-inner);overflow:hidden;aspect-ratio:4/5;background:var(--sugar)}
+.opening .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s var(--ease),transform 1.2s var(--ease)}
+.opening .photo img.out{opacity:0;transform:scale(1.03)}
+.opening .photo .see{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:14px 4px 2px;font-weight:600}
+@media (max-width:900px){
+  .opening{grid-template-columns:minmax(0,1fr)}
+  .opening .words{grid-column:1;padding-right:clamp(24px,5vw,64px);padding-bottom:120px}
+  .opening .photo{grid-column:1;grid-row:2;margin:-96px 8% 0;max-width:520px;justify-self:center;width:84%}
+}
+
+/* ---------- HOME: range ---------- */
+.range-slab{z-index:3;padding-bottom:0}
+.range-head{display:grid;gap:18px;max-width:40rem;margin-bottom:clamp(32px,5vw,56px)}
+.range{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;margin-bottom:-72px}
+.range figure{margin:0;position:relative}
+.range figure:nth-child(1){z-index:1}
+.range figure:nth-child(2){margin-top:72px;margin-left:-28px;z-index:2}
+.range figure:nth-child(3){margin-top:18px;margin-left:-28px;z-index:3}
+.range figure:nth-child(4){margin-top:96px;margin-left:-28px;z-index:4}
+.range .slab{padding:14px;box-shadow:var(--lift)}
+.range img{border-radius:var(--r-inner);aspect-ratio:3/4;object-fit:cover;width:100%}
+.range figcaption{padding:14px 6px 4px;font-weight:600;font-size:var(--fs-small);background:var(--c);border-radius:0 0 var(--r-inner) var(--r-inner)}
+.range figure .slab{border-radius:var(--r-slab) var(--r-slab) 0 0}
+.range figcaption span{display:block;font-weight:400;color:var(--plum-soft);font-size:var(--fs-small)}
+@media (max-width:900px){
+  .range-head{grid-template-columns:minmax(0,1fr)}
+  .range{grid-template-columns:1fr 1fr;gap:16px}
+  .range figure:nth-child(n){margin:0}
+  .range figure:nth-child(even){margin-top:40px}
+}
+
+/* ---------- HOME: slice calculator ---------- */
+.calc{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:start;padding-top:calc(clamp(24px,5vw,64px) + 72px);z-index:2}
+.calc .meter{display:grid;gap:18px;margin-bottom:calc(-1 * clamp(96px,10vw,140px))}
+.calc label{font-weight:600}
+.big{font:400 clamp(3.4rem,9vw,6rem)/.95 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.big small{font:600 1rem var(--text);letter-spacing:0;margin-left:.3em;color:var(--plum-soft)}
+.calc .per{color:var(--plum-soft)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:14px;border-radius:999px;background:linear-gradient(to right,var(--butter-gel) var(--p,25%),rgba(46,36,70,.12) var(--p,25%));outline-offset:6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:32px;height:32px;border-radius:50%;background:var(--sugar);box-shadow:inset 0 0 0 7px var(--berry),0 6px 14px -6px rgba(46,36,70,.6);cursor:grab}
+input[type=range]::-moz-range-thumb{width:32px;height:32px;border:0;border-radius:50%;background:var(--sugar);box-shadow:inset 0 0 0 7px var(--berry),0 6px 14px -6px rgba(46,36,70,.6);cursor:grab}
+.calc .meter .scale{display:flex;justify-content:space-between;font-size:var(--fs-caption);color:var(--plum-soft)}
+@media (max-width:900px){.calc{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- HOME: Fiona ---------- */
+.meet{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:start}
+.meet .words{grid-column:5 / span 8;grid-row:1;padding-left:calc(clamp(24px,5vw,64px) + 10%);padding-top:calc(clamp(24px,5vw,64px) + clamp(96px,10vw,140px) - 40px)}
+.meet .words p+p{margin-top:1em}
+.meet .words h2{margin-bottom:20px}
+.meet .photo{grid-column:1 / span 5;margin-top:calc(clamp(96px,10vw,140px) + 24px);grid-row:1;z-index:2;background:var(--c);padding:14px;box-shadow:var(--lift)}
+.meet .photo img{border-radius:var(--r-inner);aspect-ratio:1;object-fit:cover;width:100%}
+.meet .go{margin-top:22px}
+@media (max-width:900px){.calc{padding-top:calc(clamp(24px,5vw,64px) + 64px)}.calc .meter{margin-bottom:-64px}.meet{grid-template-columns:minmax(0,1fr)}.meet .words{grid-column:1;padding-left:clamp(24px,5vw,64px);padding-top:calc(clamp(24px,5vw,64px) + 64px);padding-bottom:110px}.meet .photo{grid-column:1;grid-row:2;margin:-90px auto 0;width:72%;max-width:360px}}
+
+/* ---------- close ---------- */
+.close{text-align:center}
+.close .slab{padding-block:clamp(48px,7vw,96px)}
+.close h2{max-width:14ch;margin-inline:auto}
+.close p{margin:18px auto 0;max-width:34em}
+.close .acts{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* ---------- inner page head ---------- */
+.page-head{margin-top:clamp(20px,3vw,36px)}
+.page-head .slab{display:grid;grid-template-columns:1.2fr .8fr;gap:24px 48px;align-items:end;transition:background-color .7s var(--ease)}
+.page-head .lede{color:var(--plum)}
+@media (max-width:900px){.page-head .slab{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- gallery ---------- */
+.filters{margin-top:28px}
+.grid{grid-column:1 / -1;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));grid-auto-flow:dense;gap:clamp(12px,1.6vw,20px);margin-top:clamp(28px,4vw,48px)}
+.tile{margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+.tile .frame{position:relative;aspect-ratio:1;border-radius:var(--r-inner);overflow:hidden;background:var(--c);flex:1 0 auto}
+.tile.wide .frame{aspect-ratio:auto;min-height:0}
+.tile.wide{grid-column:span 2;grid-row:span 2}
+.tile button{all:unset;position:absolute;inset:0;cursor:zoom-in}
+.tile button{z-index:1}
+.tile button:focus-visible{outline:3px solid var(--berry);outline-offset:-3px;border-radius:var(--r-inner)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.tile:hover img{transform:scale(1.04)}
+.tile figcaption{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding-inline:2px}
+.tile .name{font:600 var(--fs-small)/1.3 var(--text)}
+@media (max-width:600px){.tile.wide{grid-column:span 1;grid-row:span 1}.tile.wide .frame{aspect-ratio:1}}
+.empty{padding:40px;text-align:center;color:var(--plum-soft)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(255,252,251,.96);display:grid;grid-template-columns:72px 1fr 72px;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 64px) 8px calc(env(safe-area-inset-bottom,0px) + 24px)}
+.lb figure{margin:0;height:100%;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.lb img{max-height:calc(100% - 56px);max-width:100%;object-fit:contain;border-radius:var(--r-inner);box-shadow:var(--lift)}
+.lb figcaption{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;font-weight:600}
+.lb .ctl{width:52px;height:52px;border-radius:50%;border:0;background:var(--sugar);box-shadow:var(--lift);color:var(--plum);display:grid;place-items:center;cursor:pointer;justify-self:center}
+.lb .ctl:hover{background:var(--rose)}
+.lb .ctl .icon{width:22px;height:22px}
+.lb .x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 12px);right:16px}
+@media (max-width:640px){.lb{grid-template-columns:minmax(0,1fr)}.lb .prev,.lb .next{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}.lb .prev{left:20px}.lb .next{right:20px}.lb img{max-height:calc(100% - 130px)}}
+
+/* ---------- flavours ---------- */
+.builder{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start}
+.section-cake{position:sticky;top:24px}
+.layers{display:grid;gap:0;padding:28px 22px 0}
+.layer{border-radius:var(--r-layer);padding:16px 20px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600;box-shadow:0 10px 20px -16px rgba(46,36,70,.55);transition:background-color .5s var(--ease)}
+.layer + .layer{margin-top:-6px}
+.layer small{font-weight:500;color:var(--plum-soft)}
+.layer.top{background:var(--sugar);border-radius:var(--r-layer) var(--r-layer) 10px 10px}
+.layer.m2{background:var(--pistachio)}
+.layer.sp{background:var(--butter)}
+.layer.m1{background:var(--rose)}
+.plate{height:16px;margin:0 -12px;border-radius:999px;background:var(--sugar);box-shadow:var(--lift)}
+.section-cake p{margin-top:22px;color:var(--plum-soft);font-size:var(--fs-small)}
+.choose{display:grid;gap:clamp(28px,4vw,40px)}
+.choose h3{margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;border:0;background:var(--sugar);box-shadow:inset 0 0 0 1.5px var(--line);color:var(--plum);font:500 var(--fs-small) var(--text);padding:.65em 1em;border-radius:999px;cursor:pointer;transition:background-color .25s var(--ease),box-shadow .25s var(--ease)}
+.chip:hover{box-shadow:inset 0 0 0 1.5px var(--plum)}
+.chip[aria-pressed="true"]{background:var(--plum);color:var(--sugar);box-shadow:none}
+.chip small{color:inherit;opacity:.75;margin-left:4px}
+.price-row{--c:var(--sugar)}
+.price-rows{display:grid;gap:12px;margin-top:24px}
+.price-row{display:grid;grid-template-columns:1fr auto;gap:6px 24px;align-items:baseline;padding:20px 24px;border-radius:var(--r-inner);background:var(--c)}
+.price-row h3{font-size:var(--fs-subtitle)}
+.price-row p{grid-column:1;color:var(--plum-soft);font-size:var(--fs-small)}
+.price-row .amt{grid-row:1 / span 2;grid-column:2;text-align:right;font:400 clamp(1.5rem,2.6vw,2.1rem)/1 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.price-row .amt small{display:block;font:500 var(--fs-caption) var(--text);color:var(--plum-soft);margin-top:6px}
+@media (max-width:900px){.builder{grid-template-columns:minmax(0,1fr)}.section-cake{position:static;max-width:420px}}
+@media (max-width:520px){.price-row{grid-template-columns:minmax(0,1fr)}.price-row .amt{grid-row:auto;grid-column:1;text-align:left}}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.about .pics{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;align-items:end}
+.about .pics img{border-radius:var(--r-inner);object-fit:cover;width:100%}
+.about .pics img:first-child{aspect-ratio:4/5}
+.about .pics img:last-child{aspect-ratio:3/4;margin-bottom:-36px;box-shadow:var(--lift)}
+.about .text p+p{margin-top:1em}
+.steps{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.steps li{border-radius:var(--r-inner);background:var(--sugar);padding:24px}
+.steps .n{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--sugar);box-shadow:inset 0 0 0 5px var(--g);font:400 var(--fs-subtitle) var(--display);margin-bottom:16px}
+.steps h3{font-size:var(--fs-subtitle);margin-bottom:8px}
+.steps p{font-size:var(--fs-small);color:var(--plum-soft)}
+@media (max-width:900px){.about{grid-template-columns:minmax(0,1fr)}.about .pics img:last-child{margin-bottom:0}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:10px;max-width:860px;margin-inline:auto}
+.faq details{border-radius:var(--r-inner);background:var(--sugar);box-shadow:inset 0 0 0 1.5px var(--line);transition:background-color .3s var(--ease)}
+.faq details[open]{background:var(--c);box-shadow:none}
+.faq summary{list-style:none;cursor:pointer;padding:20px 60px 20px 24px;position:relative;font:400 clamp(1.15rem,1.8vw,1.35rem)/1.3 var(--display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:22px;top:50%;width:26px;height:26px;margin-top:-13px;border-radius:50%;background:var(--sugar) center/12px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 1v10M1 6h10' stroke='%232E2446' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");box-shadow:inset 0 0 0 1.5px var(--line);transition:transform .35s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 24px 22px;max-width:40em}
+
+/* ---------- order ---------- */
+.order{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(20px,3vw,32px);align-items:start;margin-top:clamp(20px,3vw,36px)}
+.order-card{background:var(--tint);transition:background-color .7s var(--ease)}
+.order-card h1{margin-bottom:12px}
+.order-card>.lede{color:var(--plum);margin-bottom:clamp(24px,3vw,36px)}
+.fs{border:0;margin:0 0 clamp(24px,3vw,32px);padding:0;min-width:0}
+.fs legend,.lbl{font-weight:700;font-size:1rem;margin-bottom:12px;padding:0;display:block}
+.fs legend small,.lbl small{font-weight:400;color:var(--plum-soft)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:8px;align-content:start;min-width:0}
+.field input,.field select,.field textarea{width:100%;min-width:0;font:500 1rem var(--text);color:var(--plum);background:var(--sugar);border:0;border-radius:var(--r-field);padding:.9em 1em;box-shadow:inset 0 0 0 1.5px rgba(46,36,70,.12);transition:box-shadow .2s}
+.field input:hover,.field select:hover,.field textarea:hover{box-shadow:inset 0 0 0 1.5px rgba(46,36,70,.3)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;box-shadow:inset 0 0 0 2px var(--berry),0 0 0 4px rgba(178,42,71,.15)}
+.field input::placeholder,.field textarea::placeholder{color:#6A5F80}
+.field textarea{min-height:140px;resize:vertical;line-height:1.55}
+.field[aria-invalid="true"] input,.field[aria-invalid="true"] select,.field[aria-invalid="true"] textarea,.field.bad input,.field.bad textarea{box-shadow:inset 0 0 0 2px var(--berry)}
+.err{color:var(--berry-deep);font-size:var(--fs-small);font-weight:600}
+.err:empty{display:none}
+.servings{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;align-items:center}
+.stepper{display:inline-flex;align-items:center;background:var(--sugar);border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(46,36,70,.12);padding:4px}
+.stepper button{width:44px;height:44px;border-radius:50%;border:0;background:transparent;color:var(--plum);cursor:pointer;display:grid;place-items:center}
+.stepper button:hover{background:var(--rose)}
+.stepper input{width:3.6em;text-align:center;border:0;background:transparent;font:400 1.5rem var(--display);color:var(--plum);font-variant-numeric:tabular-nums;-moz-appearance:textfield;padding:0}
+.stepper input::-webkit-inner-spin-button,.stepper input::-webkit-outer-spin-button{-webkit-appearance:none}
+.stepper input:focus{outline:none}
+.stepper:focus-within{box-shadow:inset 0 0 0 2px var(--berry)}
+.toggle{display:flex;gap:14px;align-items:center;cursor:pointer;font-weight:500}
+.toggle input{position:absolute;opacity:0}
+.toggle i{flex:none;width:52px;height:30px;border-radius:999px;background:rgba(46,36,70,.18);position:relative;transition:background-color .3s var(--ease)}
+.toggle i::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:var(--sugar);box-shadow:0 2px 6px rgba(46,36,70,.3);transition:transform .3s var(--ease)}
+.toggle input:checked+i{background:var(--berry)}
+.toggle input:checked+i::after{transform:translateX(22px)}
+.toggle input:focus-visible+i{outline:2.5px solid var(--berry);outline-offset:3px}
+.band{display:flex;gap:12px;align-items:flex-start;margin-top:12px;padding:14px 16px;border-radius:var(--r-field);background:var(--sugar);font-size:var(--fs-small);font-weight:500}
+.band .icon{width:20px;height:20px;margin-top:2px;color:var(--plum-soft)}
+.band.warn{background:var(--berry);color:var(--sugar)}
+.band.warn .icon{color:var(--sugar)}
+.band.ok{background:rgba(255,252,251,.7)}
+.submit-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:8px}
+.submit-row p{color:var(--plum-soft);font-size:var(--fs-small);max-width:26em}
+.errors{margin-top:18px;padding:16px 18px;border-radius:var(--r-field);background:var(--sugar);color:var(--berry-deep);font-weight:600}
+.errors ul{margin:6px 0 0;padding-left:1.2em;font-weight:500}
+.summary{position:sticky;top:24px;display:grid;gap:14px}
+.summary .slab{padding:clamp(22px,3vw,32px)}
+.summary .big{font-size:clamp(3rem,6vw,4.6rem)}
+.summary dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:18px 0 0;font-size:var(--fs-small)}
+.summary dt{color:var(--plum-soft)}
+.summary dd{margin:0;font-weight:600;text-align:right}
+.summary .contact{font-size:var(--fs-small);display:grid;gap:4px}
+.summary .contact strong{font:400 var(--fs-subtitle) var(--display)}
+.result{margin-top:clamp(20px,3vw,32px)}
+.result h2{font-size:clamp(1.35rem,2vw,1.7rem)}
+.result p{margin-top:8px;color:var(--plum-soft)}
+.result pre{white-space:pre-wrap;font:500 var(--fs-small)/1.65 var(--text);color:var(--plum);background:var(--sugar);border-radius:var(--r-field);padding:20px;margin:18px 0;max-height:360px;overflow:auto}
+.result .acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.status{font-weight:600;font-size:var(--fs-small)}
+@media (max-width:980px){.order{grid-template-columns:minmax(0,1fr)}.summary{position:static}}
+@media (max-width:560px){.row2{grid-template-columns:minmax(0,1fr)}.servings{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- footer ---------- */
+.site-foot{margin-top:clamp(12px,1.6vw,20px);padding-bottom:24px}
+.site-foot .slab{--c:var(--plum);color:var(--sugar);display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:32px}
+.site-foot .brand{color:var(--sugar)}
+.site-foot .brand small{color:rgba(255,252,251,.7)}
+.site-foot .rose-mark .bloom{fill:rgba(248,216,220,.18)}
+.site-foot .rose-mark .petal{stroke:var(--rose)}
+.site-foot h2{font:700 var(--fs-small) var(--text);letter-spacing:0;color:var(--sugar);margin-bottom:10px}
+.site-foot p,.site-foot a{color:rgba(255,252,251,.86);font-size:var(--fs-small);line-height:1.8}
+.site-foot a{text-decoration:none}
+.site-foot a:hover{color:var(--sugar);text-decoration:underline}
+.site-foot .fine{grid-column:1 / -1;border-top:1px solid rgba(255,252,251,.16);padding-top:20px;font-size:var(--fs-caption);color:rgba(255,252,251,.66);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:900px){.site-foot .slab{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.site-foot .slab{grid-template-columns:minmax(0,1fr)}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+/* ---------- phone refinements ---------- */
+.brand b{white-space:nowrap}
+@media (max-width:600px){
+  .brand svg{width:38px;height:38px}
+  .brand b{font-size:var(--fs-subtitle)}
+  .pots{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:14px 10px}
+  .pot{max-width:none;font-size:var(--fs-caption);hyphens:auto;overflow-wrap:anywhere;padding-inline:0}
+  .pot i{width:42px;height:42px;box-shadow:inset 0 0 0 4px var(--g),0 8px 16px -10px rgba(46,36,70,.5)}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .tile .name{display:none}
+  .tile .tag{font-size:var(--fs-caption);padding:.45em .6em}
+  #count{justify-self:start!important}
+  .opening .acts .btn{flex:1 1 auto;justify-content:center}
+}
+
+/* mobile estimate bar on the order page */
+.mbar{display:none}
+@media (max-width:980px){
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;justify-content:space-between;align-items:center;gap:12px;padding:12px var(--gutter) calc(12px + env(safe-area-inset-bottom,0px));background:var(--butter);box-shadow:0 -12px 30px -18px rgba(46,36,70,.45);border-radius:var(--r-inner) var(--r-inner) 0 0}
+  .mbar span{font-weight:600;font-size:var(--fs-small)}
+  .mbar b{font:400 1.6rem/1 var(--display);font-variant-numeric:tabular-nums}
+  .order-page{padding-bottom:84px}
+}
+
+/* entry: slabs below the fold rise in once, from a near-visible state */
+.rise{opacity:.001;transform:translateY(28px)}
+.rise.in{opacity:1;transform:none;transition:opacity .9s var(--ease),transform 1s var(--ease)}
+.skip{position:absolute;left:var(--gutter);top:-60px;z-index:70;background:var(--plum);color:var(--sugar);padding:.8em 1.2em;border-radius:999px;font-weight:600;text-decoration:none}
+.skip:focus,.skip:hover{top:12px;color:var(--sugar)}
+main:focus{outline:none}
+.fine-note{margin-top:14px;font-size:var(--fs-caption);color:var(--plum-soft)}
+
+</style>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#hem" aria-label="Fiona's Bakery, startsida"><svg class="rose-mark" viewBox="0 0 64 64" aria-hidden="true">
+  <circle class="bloom" cx="31" cy="29" r="16"/>
+  <path class="stem" d="M31.6 44.2c-.4 5.6.2 11.2 1.6 16.4"/>
+  <path class="leaf" d="M32.2 52.6c-4.8.4-8.6-2-10-5.8 4.4-1.4 8.6.6 10 5.8zM32.6 50c3.8-1.6 7.8-.6 9.8 2.6-3.6 2-7.8 1-9.8-2.6z"/>
+  <path class="petal" d="M31.5 25.5c1.8-1.6 4.6-.6 4.7 1.8.1 2.6-3 4.2-5.6 3.2-3.2-1.2-3.6-5.6-1.2-8 3-3 8.4-2.6 10.8.8 2.8 4 1.2 9.8-3.2 12-4.8 2.4-11 .4-13.2-4.4-2.2-4.8 0-10.6 4.8-13"/>
+  <path class="petal" d="M22.4 22.6c-4.2 4.6-4.6 12-.8 16.8 4.2 5.4 12.4 6.6 18 2.6 5.6-4 7-12 3.4-17.8"/>
+  <path class="petal" d="M42.8 20.6c1.8-3.6 1-7.4-1.4-9.6-2.6 2.2-3.8 5.4-3.2 8.6M19.6 26.2c-3.8-.4-6.8-3-7.6-6.4 3.2-1 6.6-.2 8.8 2.2"/>
+</svg><span><b>Fiona's Bakery</b><small>Konditori i Arlöv</small></span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="tabs"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg> Meny</button>
+    <nav aria-label="Huvudmeny"><ul class="tabs" id="tabs"><li class="c-rose"><a href="#tartor">Tårtor</a></li><li class="c-butter"><a href="#smaker">Smaker & priser</a></li><li class="c-pistachio"><a href="#om">Om Fiona</a></li><li class="c-rose"><a href="#fragor">Frågor</a></li><li class="c-rose"><a href="#bestall" class="tab-order">Beställ tårta</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<article data-page="hem" aria-label="Hem">
+
+<div class="wrap">
+  <div class="opening">
+    <div class="words slab">
+      <h1>Tårtor på beställning i Malmö och Arlöv</h1>
+      <p class="lede measure">Bröllopstårtor med handgjorda sockerblommor, barntårtor och bakelser. Bakade för hand av Fiona i Arlöv, nära Malmö.</p>
+      <div class="acts">
+        <a class="btn btn-gel" href="#bestall">Beställ tårta <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+        <a class="btn btn-line" href="#tartor">Se tårtorna</a>
+      </div>
+      <div class="picker">
+        <h2>Vad firar ni? Välj och se vad Fiona har gjort.</h2>
+        <ul class="pots"><li><button type="button" class="pot c-rose" data-occ="brollop" aria-pressed="true"><i></i>Bröllop</button></li><li><button type="button" class="pot c-butter" data-occ="barn" aria-pressed="false"><i></i>Barnkalas & dop</button></li><li><button type="button" class="pot c-butter" data-occ="fest" aria-pressed="false"><i></i>Födelsedag</button></li><li><button type="button" class="pot c-pistachio" data-occ="student" aria-pressed="false"><i></i>Student</button></li><li><button type="button" class="pot c-pistachio" data-occ="bakelser" aria-pressed="false"><i></i>Företag & event</button></li></ul>
+      </div>
+    </div>
+    <figure class="photo slab">
+      <div class="frame">
+        <img id="heroImg" data-k="39" src="img/39.webp" width="1280" height="1600" alt="Bröllopstårtor: sockerblommor från Fiona's Bakery" fetchpriority="high">
+      </div>
+      <figcaption class="see"><span class="tag c-rose" id="heroTag">Sockerblommor</span><a class="go" id="heroSee" href="#tartor" data-filter="brollop"><span>Se fler bröllopstårtor</span><span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a></figcaption>
+    </figure>
+  </div>
+</div>
+
+<section class="wrap" aria-labelledby="range-h">
+ <div class="slab c-pistachio range-slab">
+  <div class="range-head">
+    <h2 id="range-h">Från sockerrosor till Super Mario, bakat av samma händer</h2>
+    <p class="lede">Fiona är både konditor och sockerblomsdesigner. Samma precision som i en pion av socker går in i en valp i sockerpasta eller en studentmössa.</p>
+  </div>
+  <div class="range">
+    <figure><div class="slab c-rose"><img src="img/02.webp" width="1000" height="968" alt="Bröllopstårta med pioner och rosor i socker" loading="lazy"></div><figcaption>Pioner och rosor i socker<span>Bröllop</span></figcaption></figure>
+    <figure><div class="slab c-rose"><img src="img/16.webp" width="750" height="1000" alt="Barntårta med Mario-figurer i sockerpasta" loading="lazy"></div><figcaption>Mario-äventyr<span>Barnkalas</span></figcaption></figure>
+    <figure><div class="slab c-butter"><img src="img/40.webp" width="800" height="1000" alt="Födelsedagstårta formad som ett roulettebord" loading="lazy"></div><figcaption>Roulette<span>Födelsedag</span></figcaption></figure>
+    <figure><div class="slab c-pistachio"><img src="img/07.webp" width="1000" height="750" alt="Cupcakes med monogram till företagsevent" loading="lazy"></div><figcaption>Cupcakes med monogram<span>Företag</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="wrap" aria-labelledby="calc-h">
+ <div class="slab c-butter calc">
+  <div>
+    <h2 id="calc-h">Vad kostar en tårta?</h2>
+    <p class="lede measure" style="margin-top:18px">Alla tårtor kostar 60 kr per bit, med botten och två moussefyllningar. Dekorationen offereras efter hur detaljerad den är, och du får alltid priset innan något är bestämt.</p>
+    <p style="margin-top:20px"><a class="go" href="#smaker">Se smaker och hela prislistan <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a></p>
+  </div>
+  <div class="slab c-sugar lift meter">
+    <label for="guests">Hur många gäster? <span class="num" id="guestsN">30</span></label>
+    <input type="range" id="guests" min="8" max="120" step="1" value="30">
+    <div class="scale num"><span>8</span><span>120</span></div>
+    <div class="big" id="guestsKr" data-v="1800" aria-live="polite">1 800 kr</div>
+    <p class="per">för tårtan före dekoration, 60 kr per bit</p>
+    <div><a class="btn btn-gel" id="guestsGo" href="#bestall"><span>Beställ för 30 personer</span> <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a></div>
+  </div>
+ </div>
+</section>
+
+<section class="wrap meet" aria-labelledby="meet-h">
+  <div class="slab c-rose words">
+    <h2 id="meet-h">Hej, jag heter Fiona</h2>
+    <p class="measure">Jag är konditor, sugarpaste-dekoratör och designer av tårtor och sockerblommor. Jag bakar för barnfamiljen som vill överraska tvååringen och för brudparet som vill ha en romantisk dröm att sätta tårtspaden i.</p>
+    <p class="measure">Vill du ha en enklare tårta går det lika bra. Är du osäker på vilka smaker som passar ihop hjälper jag dig.</p>
+    <a class="go" href="#om">Så går en beställning till <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+  </div>
+  <div class="photo slab c-rose"><img src="img/13.webp" width="1200" height="1600" alt="Körsbärsgren och ros formade i socker av Fiona" loading="lazy"></div>
+</section>
+
+<section class="wrap close" aria-labelledby="close-h">
+  <div class="slab c-pistachio">
+    <h2 id="close-h">Berätta om er dag, så bakar Fiona tårtan</h2>
+    <p class="lede">Designtårtor beställs 1-2 veckor i förväg, tårtor med sockerblommor gärna en månad innan. Hämtas i Arlöv, leverans på förfrågan.</p>
+    <div class="acts"><a class="btn btn-gel" href="#bestall">Beställ tårta <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a><a class="btn btn-line" href="tel:+46738740378">Ring 073-874 03 78</a></div>
+  </div>
+</section>
+
+</article>
+<article data-page="tartor" aria-label="Tårtor" hidden>
+
+<div class="wrap page-head">
+  <div class="slab" id="tartorHead" style="--c:var(--rose)">
+    <div>
+      <h1>Våra tårtor</h1>
+      <p class="lede measure" style="margin-top:16px">Bröllopstårtor, barntårtor, studenttårtor och tårtor med handgjorda sockerblommor, bakade i Arlöv för kunder i Malmö, Lund och Burlöv.</p>
+    </div>
+    <p class="num" id="count" aria-live="polite" style="font-weight:600;justify-self:end">36 tårtor</p>
+    <ul class="pots filters" id="filters" aria-label="Visa tårtor för" style="grid-column:1/-1"></ul>
+    <div class="grid" id="grid"></div>
+  </div>
+</div>
+<section class="wrap close" aria-labelledby="t-close">
+  <div class="slab c-pistachio">
+    <h2 id="t-close">Har du sett något du gillar?</h2>
+    <p class="lede">Berätta vilken tårta som inspirerat dig. Fiona gör den till er egen.</p>
+    <div class="acts"><a class="btn btn-gel" href="#bestall">Beställ tårta <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a></div>
+  </div>
+</section>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Bildvisning">
+  <button class="ctl x" id="lbX" aria-label="Stäng"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg></button>
+  <button class="ctl prev" id="lbPrev" aria-label="Föregående tårta"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></button>
+  <figure><img id="lbImg" src="img/39.webp" width="1280" height="1600" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="ctl next" id="lbNext" aria-label="Nästa tårta"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></button>
+</div>
+
+</article>
+<article data-page="smaker" aria-label="Smaker & priser" hidden>
+
+<div class="wrap page-head">
+  <div class="slab c-butter">
+    <div>
+      <h1>Smaker &amp; priser</h1>
+      <p class="lede measure" style="margin-top:16px">Tårta från 60 kr per bit. Välj botten och två moussefyllningar, så växer tårtan fram här bredvid.</p>
+    </div>
+    <p style="justify-self:end;text-align:right"><span class="big num" id="perSlice" data-v="60">60 kr</span><br><span style="font-weight:600">per bit med dina val</span></p>
+  </div>
+</div>
+
+<section class="wrap" aria-label="Komponera din tårta">
+ <div class="slab c-sugar lift builder">
+  <div class="section-cake" id="cake" aria-live="polite">
+    <div class="layers">
+      <div class="layer top">Dekoration <small>efter önskemål</small></div>
+      <div class="layer m2" data-layer="m2">Mousse 2 <small>välj</small></div>
+      <div class="layer sp" data-layer="base">Botten <small>Vanilj</small></div>
+      <div class="layer m1" data-layer="m1">Mousse 1 <small>välj</small></div>
+      <div class="layer sp">Botten <small>samma som ovan</small></div>
+      <div class="plate"></div>
+    </div>
+    <p>Dina val följer med till beställningen. Hittar du inte din smak? Skriv vad du önskar, det finns fler alternativ.</p>
+  </div>
+  <div class="choose"><h2 class="sr">Välj smaker</h2>
+    <div><h3>Botten</h3><div class="chips" data-group="base"><button type="button" class="chip" data-v="Vanilj" aria-pressed="false">Vanilj</button><button type="button" class="chip" data-v="Choklad" aria-pressed="false">Choklad</button></div></div>
+    <div><h3>Mousse 1</h3><div class="chips" data-group="m1"><button type="button" class="chip" data-v="Blåbär" aria-pressed="false">Blåbär</button><button type="button" class="chip" data-v="Hallon" aria-pressed="false">Hallon</button><button type="button" class="chip" data-v="Mango" aria-pressed="false">Mango</button><button type="button" class="chip" data-v="Passion" aria-pressed="false">Passion</button><button type="button" class="chip" data-v="Skogsbär" aria-pressed="false">Skogsbär</button><button type="button" class="chip" data-v="Jordgubb" aria-pressed="false">Jordgubb</button><button type="button" class="chip" data-v="Jordgubb & rabarber" aria-pressed="false">Jordgubb & rabarber</button><button type="button" class="chip" data-v="Pistage" aria-pressed="false">Pistage<small>+5 kr</small></button></div></div>
+    <div><h3>Mousse 2</h3><div class="chips" data-group="m2"><button type="button" class="chip" data-v="Vit choklad" aria-pressed="false">Vit choklad</button><button type="button" class="chip" data-v="Mjölkchoklad" aria-pressed="false">Mjölkchoklad</button><button type="button" class="chip" data-v="Mörk choklad" aria-pressed="false">Mörk choklad</button><button type="button" class="chip" data-v="Pannacotta" aria-pressed="false">Pannacotta</button><button type="button" class="chip" data-v="Citron" aria-pressed="false">Citron</button><button type="button" class="chip" data-v="Nougat" aria-pressed="false">Nougat<small>+5 kr</small></button></div></div>
+    <p><a class="btn btn-gel" href="#bestall">Beställ med de här smakerna <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a></p>
+  </div>
+ </div>
+</section>
+
+<section class="wrap" aria-labelledby="pl-h">
+ <div class="slab c-rose">
+  <h2 id="pl-h">Prislista</h2>
+  <div class="price-rows">
+    <div class="price-row"><h3>Designtårta</h3><p>Botten och två moussefyllningar. Dekorationen prissätts efter antal detaljer och svårighetsgrad.</p><div class="amt">60 kr<small>per bit</small></div></div>
+    <div class="price-row"><h3>Bageritårtor</h3><p>Tiramisu, moussetårta, vit chokladcheesecake på mördegsbotten, prinsesstårta.</p><div class="amt">60 kr<small>per bit</small></div></div>
+    <div class="price-row"><h3>Cakepops, macarons, mini cupcakes</h3><p>Minst 12 stycken.</p><div class="amt">25 kr<small>per st</small></div></div>
+    <div class="price-row"><h3>Bakelser</h3><p>Pannacotta eller moussebakelse i glas, maränglollipop, mini popsicles, stora cupcakes med marängsmörkräm. Minst 4 stycken.</p><div class="amt">45 kr<small>per st</small></div></div>
+    <div class="price-row"><h3>Logga, tema eller specialdekor</h3><p>Tillägg på bakelser med logotyp, specialspritsning eller färg.</p><div class="amt">+10 kr<small>per st</small></div></div>
+  </div>
+ </div>
+</section>
+
+</article>
+<article data-page="om" aria-label="Om Fiona" hidden>
+
+<div class="wrap page-head">
+  <div class="slab c-butter">
+    <div>
+      <h1>Om Fiona, konditor i Arlöv</h1>
+      <p class="lede measure" style="margin-top:16px">Konditor, sugarpaste-dekoratör och Cake and Sugarflower designer, med verkstad några minuter från Malmö.</p>
+    </div>
+  </div>
+</div>
+<section class="wrap">
+ <div class="slab c-pistachio about">
+  <div class="pics">
+    <img src="img/13.webp" width="1200" height="1600" alt="Körsbärsgren och ros formade i socker" loading="lazy">
+    <img src="img/35.webp" width="800" height="1000" alt="Blå ros i socker på en tårta" loading="lazy">
+  </div>
+  <div class="text measure">
+    <p class="lede" style="color:var(--plum)">Fiona Hua driver Fiona's Bakery i Arlöv. Hon bakar skräddarsydda tårtor för bröllop, födelsedagar, dop och babyshowers, och trendiga bakelser som cakepops, popsicles, cupcakes och macarons.</p>
+    <p>Sockerblommorna är hennes signatur. Varje kronblad kavlas, formas och färgas för hand och får torka innan det sätts på tårtan, därför behöver de lite extra tid. Figurerna i sockerpasta, från nallar till Super Mario, modelleras på samma sätt.</p>
+    <p>Fiona bakar främst för Malmö, Lund och Burlöv, ungefär 15 km runt Arlöv, i mån av tid. Tårtan hämtas i Arlöv och leverans kan ordnas på förfrågan.</p>
+  </div>
+ </div>
+</section>
+<section class="wrap" aria-labelledby="steps-h">
+ <div class="slab c-butter">
+  <h2 id="steps-h">Så beställer du en tårta</h2>
+  <ol class="steps">
+    <li class="c-rose"><span class="n">1</span><h3>Skicka en förfrågan</h3><p>Datum, antal bitar och ungefär vad du tänker dig.</p></li>
+    <li class="c-butter"><span class="n">2</span><h3>Smak och design</h3><p>Ni pratar igenom tårtan. Inspirationsbilder bifogar du när ni mejlar vidare.</p></li>
+    <li class="c-pistachio"><span class="n">3</span><h3>Offert och betalning</h3><p>Pris efter antal bitar och dekorationens detaljer. Betalning med Företagsswish.</p></li>
+    <li class="c-rose"><span class="n">4</span><h3>Hämta och fira</h3><p>Tårtan hämtas i Arlöv på överenskommen tid, eller levereras efter överenskommelse.</p></li>
+  </ol>
+  <p style="margin-top:32px"><a class="btn btn-gel" href="#bestall">Beställ tårta <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a></p>
+ </div>
+</section>
+
+</article>
+<article data-page="fragor" aria-label="Frågor" hidden>
+
+<div class="wrap page-head">
+  <div class="slab c-pistachio">
+    <div>
+      <h1>Frågor om tårtbeställning</h1>
+      <p class="lede measure" style="margin-top:16px">Det här undrar de flesta. Hittar du inte svaret? Ring 073-874 03 78.</p>
+    </div>
+  </div>
+</div>
+<section class="wrap"><div class="slab c-butter"><div class="faq">
+<details class="c-rose" open><summary>Hur långt i förväg behöver jag beställa tårta?</summary><p>Designtårtor minst 1-2 veckor innan, tårtor med sockerblommor gärna en månad i förväg. Är det bråttom går det ofta att lösa, så hör av dig ändå.</p></details><details class="c-butter"><summary>Vad kostar en tårta eller bröllopstårta?</summary><p>Grundpriset är 60 kr per bit. Pistage- eller nougatmousse kostar 5 kr extra per bit. Dekorationen prissätts efter antal detaljer och hur avancerade de är, och du får alltid en offert först.</p></details><details class="c-rose"><summary>Var hämtar jag tårtan? Levererar ni i Malmö och Lund?</summary><p>Tårtan hämtas på Trossgatan 25 i Arlöv. Fiona bakar främst för Malmö, Lund och Burlöv, ungefär 15 km runt Arlöv, i mån av tid. Leverans kan ordnas på förfrågan.</p></details><details class="c-pistachio"><summary>Kan jag skicka inspirationsbilder?</summary><p>Ja, gärna. Skicka först din förfrågan. När Fiona svarar kan du bifoga bilder på hur du vill att tårtan ska se ut.</p></details><details class="c-butter"><summary>Hur betalar jag?</summary><p>Med Företagsswish. Fiona's Bakery är godkänt för F-skatt, vilket gör det enkelt för företag att beställa.</p></details><details class="c-rose"><summary>Kan ni ta hänsyn till allergier?</summary><p>Skriv om allergier och specialkost i förfrågan, så berättar Fiona vilka alternativ som går att göra.</p></details>
+</div></div></section>
+<section class="wrap close"><div class="slab c-rose"><h2>Redo att beställa?</h2><div class="acts"><a class="btn btn-gel" href="#bestall">Beställ tårta <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a></div></div></section>
+
+</article>
+<article data-page="bestall" aria-label="Beställ tårta" hidden>
+
+<div class="order-page"><div class="wrap order">
+  <div class="slab order-card" id="orderCard">
+    <h1>Beställ tårta</h1>
+    <p class="lede measure">Fyll i det du vet. Förfrågan är inte bindande, Fiona återkommer med förslag och offert.</p>
+    <form id="orderForm" novalidate>
+      <fieldset class="fs field" id="w-occ">
+        <legend>Vad ska ni fira?</legend>
+        <ul class="pots"><li><label class="pot c-rose"><input type="radio" name="occ" value="brollop"><i></i>Bröllop</label></li><li><label class="pot c-butter"><input type="radio" name="occ" value="barn"><i></i>Barnkalas & dop</label></li><li><label class="pot c-butter"><input type="radio" name="occ" value="fest"><i></i>Födelsedag</label></li><li><label class="pot c-pistachio"><input type="radio" name="occ" value="student"><i></i>Student</label></li><li><label class="pot c-pistachio"><input type="radio" name="occ" value="bakelser"><i></i>Företag & event</label></li></ul>
+      </fieldset>
+      <div class="fs row2">
+        <div class="field" id="w-date">
+          <label class="lbl" for="date">Datum</label>
+          <input type="date" id="date" aria-required="true" aria-describedby="errors">
+        </div>
+        <div class="field" id="w-servings">
+          <label class="lbl" for="servings">Antal bitar</label>
+          <div class="stepper">
+            <button type="button" data-d="-1" aria-label="En bit färre"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg></button>
+            <input type="number" id="servings" min="4" max="400" value="30" inputmode="numeric" aria-required="true" aria-describedby="errors">
+            <button type="button" data-d="1" aria-label="En bit fler"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="band" id="band" role="status"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg><span id="bandText">Designtårtor beställs 1-2 veckor i förväg.</span></div>
+      <div class="fs" style="margin-top:clamp(24px,3vw,32px)">
+        <span class="lbl">Smaker <small>(valfritt, Fiona hjälper gärna till)</small></span>
+        <div class="row2" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+          <div class="field"><label for="base" class="sr">Botten</label><select id="base"><option value="Vanilj">Vaniljbotten</option><option value="Choklad">Chokladbotten</option></select></div>
+          <div class="field"><label for="m1" class="sr">Mousse 1</label><select id="m1"><option value="">Mousse 1: välj</option><option value="Blåbär">Blåbär</option><option value="Hallon">Hallon</option><option value="Mango">Mango</option><option value="Passion">Passion</option><option value="Skogsbär">Skogsbär</option><option value="Jordgubb">Jordgubb</option><option value="Jordgubb & rabarber">Jordgubb & rabarber</option><option value="Pistage">Pistage (+5 kr/bit)</option></select></div>
+          <div class="field"><label for="m2" class="sr">Mousse 2</label><select id="m2"><option value="">Mousse 2: välj</option><option value="Vit choklad">Vit choklad</option><option value="Mjölkchoklad">Mjölkchoklad</option><option value="Mörk choklad">Mörk choklad</option><option value="Pannacotta">Pannacotta</option><option value="Citron">Citron</option><option value="Nougat">Nougat (+5 kr/bit)</option></select></div>
+        </div>
+      </div>
+      <div class="fs"><label class="toggle"><input type="checkbox" id="flowers"><i></i>Jag önskar handgjorda sockerblommor</label></div>
+      <div class="fs field" id="w-wish">
+        <label class="lbl" for="wish">Hur tänker du dig tårtan?</label>
+        <textarea id="wish" aria-required="true" aria-describedby="errors" placeholder="Tema, färger, text på tårtan, allergier …"></textarea>
+      </div>
+      <div class="fs field">
+        <label class="lbl" for="pickup">Hämtning</label>
+        <select id="pickup"><option>Hämtar i Arlöv</option><option>Önskar leverans (på förfrågan)</option></select>
+      </div>
+      <div class="fs row2">
+        <div class="field" id="w-name"><label class="lbl" for="name">Namn</label><input id="name" autocomplete="name" aria-required="true" aria-describedby="errors"></div>
+        <div class="field" id="w-phone"><label class="lbl" for="phone">Telefon</label><input id="phone" type="tel" autocomplete="tel" aria-required="true" aria-describedby="errors"></div>
+      </div>
+      <div class="fs field" id="w-email"><label class="lbl" for="email">E-post</label><input id="email" type="email" autocomplete="email" aria-required="true" aria-describedby="errors"></div>
+      <div class="errors" id="errors" hidden role="alert"></div>
+      <div class="submit-row">
+        <button class="btn btn-gel" type="submit">Skapa förfrågan <span class="ico"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></button>
+        <p>Du ser hela texten innan något skickas.</p>
+      </div>
+    </form>
+    <div class="result" id="result" hidden>
+      <h2 id="resultHead" tabindex="-1">Din förfrågan är klar</h2>
+      <p>Öppna den i ditt e-postprogram, eller kopiera texten och skicka den till kontakt@fionasbakery.se.</p>
+      <pre id="resultText"></pre>
+      <div class="acts">
+        <a class="btn btn-gel" id="mailLink" href="#">Öppna i e-post</a>
+        <button class="btn btn-line" type="button" id="copyBtn">Kopiera texten</button>
+        <span class="status" id="copyStatus" aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+  <aside class="summary" aria-label="Sammanfattning">
+    <div class="slab c-butter">
+      <span style="font-weight:600">Uppskattat baspris</span>
+      <div class="big" id="estimate" data-v="1800" aria-live="polite">1 800 kr</div>
+      <dl class="num">
+        <dt>Tillfälle</dt><dd id="sumOcc">Ej valt</dd>
+        <dt>Datum</dt><dd id="sumDate">Ej valt</dd>
+        <dt>Antal</dt><dd id="sumN">30 bitar</dd>
+        <dt>Pris per bit</dt><dd id="sumPer">60 kr</dd>
+      </dl>
+      <p class="fine-note">Före dekoration. Slutpriset kommer i offerten.</p>
+    </div>
+    <div class="slab c-sugar lift contact">
+      <span>Hellre prata direkt?</span>
+      <strong><a href="tel:+46738740378">073-874 03 78</a></strong>
+      <a href="mailto:kontakt@fionasbakery.se">kontakt@fionasbakery.se</a>
+    </div>
+  </aside>
+</div>
+<div class="mbar" aria-hidden="true"><span>Uppskattat baspris<br><small id="mN">30 bitar</small></span><b id="mEst">1 800 kr</b></div>
+</div>
+
+</article>
+
+</main>
+<footer class="wrap site-foot">
+  <div class="slab">
+    <div>
+      <a class="brand" href="#hem"><svg class="rose-mark" viewBox="0 0 64 64" aria-hidden="true">
+  <circle class="bloom" cx="31" cy="29" r="16"/>
+  <path class="stem" d="M31.6 44.2c-.4 5.6.2 11.2 1.6 16.4"/>
+  <path class="leaf" d="M32.2 52.6c-4.8.4-8.6-2-10-5.8 4.4-1.4 8.6.6 10 5.8zM32.6 50c3.8-1.6 7.8-.6 9.8 2.6-3.6 2-7.8 1-9.8-2.6z"/>
+  <path class="petal" d="M31.5 25.5c1.8-1.6 4.6-.6 4.7 1.8.1 2.6-3 4.2-5.6 3.2-3.2-1.2-3.6-5.6-1.2-8 3-3 8.4-2.6 10.8.8 2.8 4 1.2 9.8-3.2 12-4.8 2.4-11 .4-13.2-4.4-2.2-4.8 0-10.6 4.8-13"/>
+  <path class="petal" d="M22.4 22.6c-4.2 4.6-4.6 12-.8 16.8 4.2 5.4 12.4 6.6 18 2.6 5.6-4 7-12 3.4-17.8"/>
+  <path class="petal" d="M42.8 20.6c1.8-3.6 1-7.4-1.4-9.6-2.6 2.2-3.8 5.4-3.2 8.6M19.6 26.2c-3.8-.4-6.8-3-7.6-6.4 3.2-1 6.6-.2 8.8 2.2"/>
+</svg><span><b>Fiona's Bakery</b><small>Konditori i Arlöv</small></span></a>
+      <p style="margin-top:14px;max-width:26em">Tårtor på beställning för Malmö, Lund och Burlöv, ungefär 15 km runt Arlöv, i mån av tid.</p>
+    </div>
+    <div><h2>Kontakt &amp; hämtning</h2><p><a href="tel:+46738740378">073-874 03 78</a><br><a href="mailto:kontakt@fionasbakery.se">kontakt@fionasbakery.se</a><br>Trossgatan 25, 232 36 Arlöv<br>Hämtning enligt överenskommelse, leverans på förfrågan<br><a href="https://www.instagram.com/fionasbakery/" rel="noopener" target="_blank">Instagram @fionasbakery</a></p></div>
+    <div><h2>Sidor</h2><p><a href="#tartor">Tårtor</a><br><a href="#smaker">Smaker & priser</a><br><a href="#om">Om Fiona</a><br><a href="#fragor">Frågor</a><br><a href="#bestall">Beställ tårta</a></p></div>
+    <p class="fine"><span>© 2026 Fiona's Bakery</span><span>Godkänd för F-skatt, betalning med Företagsswish</span></p>
+  </div>
+</footer>
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const DIMS = {"00": [800, 1000], "01": [1000, 561], "02": [1000, 968], "03": [750, 1000], "04": [750, 1000], "05": [1000, 1000], "06": [1000, 750], "07": [1000, 750], "08": [750, 1000], "09": [1000, 750], "10": [750, 1000], "11": [1000, 750], "12": [1000, 750], "13": [1200, 1600], "14": [1200, 1600], "15": [750, 1000], "16": [750, 1000], "19": [750, 1000], "20": [750, 1000], "21": [1000, 699], "22": [1000, 750], "23": [750, 1000], "24": [1000, 1000], "25": [892, 1000], "26": [800, 1000], "27": [800, 1000], "28": [800, 1000], "29": [800, 1000], "30": [1000, 1000], "31": [1000, 782], "32": [1000, 779], "33": [800, 1000], "34": [800, 1000], "35": [800, 1000], "37": [800, 1000], "38": [1000, 1000], "39": [1280, 1600], "40": [800, 1000]};
+  const wh = k => DIMS[k] ? `width="${DIMS[k][0]}" height="${DIMS[k][1]}"` : '';
+  const kr = n => n.toLocaleString('sv-SE') + ' kr';
+  const PRICE = 60;
+
+  /* ---------- shared order state (survives page changes) ---------- */
+  const store = (() => {
+    let mem = {};
+    try { mem = JSON.parse(sessionStorage.getItem('fb-order') || '{}'); } catch (_) {}
+    return {
+      get: k => mem[k],
+      set(k, v) { mem[k] = v; try { sessionStorage.setItem('fb-order', JSON.stringify(mem)); } catch (_) {} }
+    };
+  })();
+
+  /* ---------- colours per occasion ---------- */
+  const OCC = {
+    brollop:  {label:'Bröllop',            c:'rose',      c2:'pistachio', img:'39', tag:'Sockerblommor', title:'Bröllopstårtor'},
+    barn:     {label:'Barnkalas & dop',    c:'butter',    c2:'rose',      img:'28', tag:'Modellerade figurer', title:'Barntårtor'},
+    fest:     {label:'Födelsedag',         c:'butter',    c2:'pistachio', img:'30', tag:'Marmor & färska blommor', title:'Födelsedagstårtor'},
+    student:  {label:'Student',            c:'pistachio', c2:'rose',      img:'34', tag:'Studentmössa i sockerpasta', title:'Studenttårtor'},
+    bakelser: {label:'Företag & event',    c:'pistachio', c2:'butter',    img:'07', tag:'Monogram & logga', title:'Bakelser med logga'},
+  };
+  const cssVar = c => `var(--${c})`;
+
+  /* ---------- tiny number ticker ---------- */
+  function tick(el, to, fmt = kr) {
+    const from = +(el.dataset.v || 0);
+    el.dataset.v = to;
+    if (reduced || from === to) { el.textContent = fmt(to); return; }
+    const t0 = performance.now(), dur = 520;
+    const step = t => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(2, -10 * p);
+      el.textContent = fmt(Math.round(from + (to - from) * (p === 1 ? 1 : e)));
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  /* ---------- gentle rise for slabs entering the viewport ---------- */
+  if (!reduced && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin: '0px 0px -8% 0px'});
+    const arm = () => $$('main section > .slab, .range figure, .tile').forEach(el => {
+      if (el.classList.contains('in') || el.dataset.armed) return;
+      if (el.getBoundingClientRect().top > innerHeight) { el.dataset.armed = 1; el.classList.add('rise'); io.observe(el); }
+    });
+    arm(); document.addEventListener('page', () => setTimeout(arm, 0)); document.addEventListener('gallery', arm);
+  }
+
+  /* ---------- menu ---------- */
+  const menuBtn = $('#menuBtn'), tabs = $('#tabs');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const open = tabs.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
+    });
+    addEventListener('keydown', e => { if (e.key === 'Escape' && tabs.classList.contains('open')) { tabs.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); menuBtn.focus(); } });
+    tabs.addEventListener('click', e => { if (e.target.closest('a')) { tabs.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); } });
+  }
+
+  /* ---------- preview routing (single-file build only) ---------- */
+  const pages = $$('[data-page]');
+  if (pages.length > 1) {
+    const ids = pages.map(p => p.dataset.page);
+    const show = scroll => {
+      const id = ids.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'hem';
+      pages.forEach(p => p.hidden = p.dataset.page !== id);
+      $$('#tabs a').forEach(a => a.getAttribute('href') === '#' + id ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+      document.dispatchEvent(new CustomEvent('page', {detail: id}));
+      if (scroll) window.scrollTo(0, 0);
+    };
+    addEventListener('hashchange', () => show(true));
+    show(false);
+  }
+
+  /* ---------- HOME: occasion pots re-tint the opening ---------- */
+  const opening = $('.opening');
+  if (opening) {
+    const img = $('#heroImg'), tag = $('#heroTag'), see = $('#heroSee');
+    const set = key => {
+      const o = OCC[key];
+      opening.style.setProperty('--tint', cssVar(o.c));
+      opening.style.setProperty('--tint-2', cssVar(o.c2));
+      $$('.pot', opening).forEach(p => p.setAttribute('aria-pressed', p.dataset.occ === key));
+      tag.textContent = o.tag; tag.className = `tag c-${o.c}`;
+      see.querySelector('span').textContent = `Se fler ${o.title.toLowerCase()}`;
+      see.dataset.filter = key;
+      if (img.dataset.k === o.img) return;
+      const swap = () => { img.src = `img/${o.img}.webp`; img.dataset.k = o.img; img.alt = `${o.title}: ${o.tag.toLowerCase()} från Fiona's Bakery`; };
+      if (reduced) return swap();
+      img.classList.add('out');
+      setTimeout(() => { swap(); img.onload = () => img.classList.remove('out'); if (img.complete) img.classList.remove('out'); }, 280);
+    };
+    $$('.pot', opening).forEach(p => p.addEventListener('click', () => { set(p.dataset.occ); store.set('occ', p.dataset.occ); }));
+  }
+  $$('[data-filter]').forEach(a => a.addEventListener('click', () => store.set('filter', a.dataset.filter)));
+
+  /* ---------- HOME: slice calculator ---------- */
+  const guests = $('#guests');
+  if (guests) {
+    const out = $('#guestsKr'), n = $('#guestsN'), go = $('#guestsGo');
+    const upd = () => {
+      const v = +guests.value;
+      guests.style.setProperty('--p', ((v - guests.min) / (guests.max - guests.min) * 100) + '%');
+      tick(out, v * PRICE); n.textContent = v;
+      go.querySelector('span').textContent = `Beställ för ${v} personer`;
+    };
+    guests.addEventListener('input', upd);
+    go.addEventListener('click', () => store.set('servings', +guests.value));
+    upd();
+  }
+
+  /* ---------- GALLERY ---------- */
+  const CATS = {alla:['Alla','sugar'], brollop:['Bröllop','rose'], sockerblommor:['Sockerblommor','rose'], barn:['Barn & dop','butter'], fest:['Fest & jubileum','butter'], student:['Student','pistachio'], bakelser:['Bakelser & företag','pistachio']};
+  const WORKS = [
+    ['39','Skulpterat socker & körsbärsblom','brollop','Skulpterat socker',1],['28','Valpar till Hector','barn','Modellerade figurer'],
+    ['08','Designerväskor','fest','3D-form'],['02','Pioner och rosor','sockerblommor','Sockerblommor'],
+    ['05','Babyshower med nallar','barn','Modellerade figurer'],['16','Mario-äventyr','barn','Modellerade figurer',1],
+    ['37','Räfflad grädde & färska rosor','brollop','Färska blommor'],['30','Marmor & champagne till 60','fest','Marmor'],
+    ['31','Cakepops med guldstänk','bakelser','Cakepops'],['34','Studentmössa med rosor','student','3D-form'],
+    ['14','Körsbärsblommor','sockerblommor','Sockerblommor'],['23','Leia fyller tre','barn','Modellerade figurer'],
+    ['00','Tre våningar med sockerrosor','brollop','Sockerblommor',1],['33','Monogram i marinblått','fest','Mönster'],
+    ['04','Vildblommor & spets','brollop','Färska blommor'],['07','Cupcakes med monogram','bakelser','Monogram'],
+    ['24','Bondgården','barn','Modellerade figurer'],['25','Bokstapel','fest','3D-form'],
+    ['12','Sockerrosor i blush','sockerblommor','Sockerblommor'],['20','Kattunge med rosett','barn','Modellerad figur'],
+    ['40','Roulette','fest','3D-form',1],['03','Pion & bladguld','brollop','Drip & bladguld'],
+    ['09','Macarons till babyshower','bakelser','Macarons'],['26','Racerbil','barn','Modellerad figur'],
+    ['29','Happy Birthday i guld','fest','Bladguld'],['35','Blå sockerros','sockerblommor','Sockerblommor'],
+    ['38','Studentmössa','student','3D-form'],['19','Liten drake','barn','Modellerad figur'],
+    ['32','Maränglollipops','bakelser','Maräng'],['15','Artonårstårta','fest','3D-detaljer'],
+    ['27','Nalle & bokstavsklossar','barn','Modellerade figurer'],['11','Cupcakes med logga','bakelser','Logga'],
+    ['06','Nallar i balett','barn','Modellerade figurer'],['22','Handväska','fest','3D-form'],
+    ['21','Cupcakes med tryck','bakelser','Tryck'],['01','Sockerpion','sockerblommor','Sockerblommor'],
+  ];
+  const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
+  const grid = $('#grid');
+  let visible = [];
+  function setFilter(k) {
+    if (!grid || !CATS[k]) return;
+    $$('#filters .pot').forEach(p => p.setAttribute('aria-pressed', p.dataset.cat === k));
+    const head = $('#tartorHead'); if (head) head.style.setProperty('--c', cssVar(k === 'alla' ? 'rose' : CATS[k][1]));
+    visible = WORKS.filter(w => k === 'alla' || w[2] === k);
+    grid.innerHTML = visible.map((w, i) => `
+      <figure class="tile c-${CATS[w[2]][1]}${w[4] && k === 'alla' ? ' wide' : ''}">
+        <div class="frame"><button type="button" data-i="${i}" aria-label="Visa större: ${w[1]}"></button>
+        <img src="img/${w[0]}.webp" ${wh(w[0])} alt="${KW[w[2]]}: ${w[1]}" loading="lazy" decoding="async"></div>
+        <figcaption><span class="name">${w[1]}</span><span class="tag c-${CATS[w[2]][1]}">${w[3]}</span></figcaption>
+      </figure>`).join('');
+    $('#count').textContent = `${visible.length} tårtor`;
+    document.dispatchEvent(new Event('gallery'));
+  }
+  if (grid) {
+    const f = $('#filters');
+    f.innerHTML = Object.entries(CATS).map(([k, [label, c]]) =>
+      `<li><button class="pot c-${c}" type="button" data-cat="${k}" aria-pressed="false"><i></i>${label}</button></li>`).join('');
+    f.addEventListener('click', e => { const b = e.target.closest('.pot'); if (b) { setFilter(b.dataset.cat); store.set('filter', b.dataset.cat); } });
+    const init = () => setFilter(store.get('filter') || 'alla');
+    init();
+    document.addEventListener('page', e => { if (e.detail === 'tartor') init(); });
+
+    const lb = $('#lb'); let cur = 0, last = null;
+    const show = i => {
+      cur = (i + visible.length) % visible.length; const w = visible[cur];
+      $('#lbImg').src = `img/${w[0]}.webp`; $('#lbImg').alt = `${KW[w[2]]}: ${w[1]}`;
+      $('#lbCap').innerHTML = `${w[1]} <span class="tag c-${CATS[w[2]][1]}">${w[3]}</span>`;
+    };
+    grid.addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if (!b) return; last = b; show(+b.dataset.i); lb.hidden = false; $('#lbX').focus(); });
+    const close = () => { lb.hidden = true; last && last.focus(); };
+    $('#lbX').onclick = close; $('#lbPrev').onclick = () => show(cur - 1); $('#lbNext').onclick = () => show(cur + 1);
+    lb.addEventListener('click', e => { if (e.target === lb || e.target.tagName === 'FIGURE') close(); });
+    addEventListener('keydown', e => { if (lb.hidden) return;
+      if (e.key === 'Tab') { const c = [$('#lbX'), $('#lbPrev'), $('#lbNext')], i = c.indexOf(document.activeElement); e.preventDefault(); c[(i + (e.shiftKey ? c.length - 1 : 1)) % c.length].focus(); return; }
+      if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+  }
+
+  /* ---------- FLAVOURS: build the cross-section ---------- */
+  const cake = $('#cake');
+  if (cake) {
+    const groups = {base:'Vanilj', m1:'', m2:''};
+    const paint = () => {
+      ['base','m1','m2'].forEach(g => {
+        const v = store.get(g) ?? groups[g];
+        $(`[data-layer="${g}"] small`).textContent = v || 'välj';
+        $$(`[data-group="${g}"] .chip`).forEach(c => c.setAttribute('aria-pressed', c.dataset.v === v));
+      });
+      const extra = (store.get('m1') === 'Pistage' ? 5 : 0) + (store.get('m2') === 'Nougat' ? 5 : 0);
+      tick($('#perSlice'), PRICE + extra);
+    };
+    $$('[data-group]').forEach(g => g.addEventListener('click', e => {
+      const c = e.target.closest('.chip'); if (!c) return;
+      store.set(g.dataset.group, c.dataset.v); paint();
+    }));
+    paint();
+    document.addEventListener('page', e => { if (e.detail === 'smaker') paint(); });
+  }
+
+  /* ---------- ORDER ---------- */
+  const form = $('#orderForm');
+  if (!form) return;
+  const card = $('#orderCard'), today = new Date(); today.setHours(0,0,0,0);
+  const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  const f = id => $('#' + id);
+  f('date').min = iso(today);
+
+  const restore = () => {
+    const occ = store.get('occ'); if (occ) { const r = form.querySelector(`input[name=occ][value="${occ}"]`); if (r) r.checked = true; }
+    if (store.get('servings')) f('servings').value = store.get('servings');
+    if (store.get('base')) f('base').value = store.get('base');
+    if (store.get('m1')) f('m1').value = store.get('m1');
+    if (store.get('m2')) f('m2').value = store.get('m2');
+    update();
+  };
+
+  function days() { const v = f('date').value; return v ? Math.round((new Date(v + 'T00:00') - today) / 864e5) : null; }
+  function update() {
+    const occ = form.querySelector('input[name=occ]:checked');
+    card.style.setProperty('--tint', cssVar(occ ? OCC[occ.value].c : 'rose'));
+    const n = Math.max(0, parseInt(f('servings').value, 10) || 0);
+    const extra = (f('m1').value === 'Pistage' ? 5 : 0) + (f('m2').value === 'Nougat' ? 5 : 0);
+    tick(f('estimate'), n * (PRICE + extra));
+    if (f('mEst')) { f('mEst').textContent = kr(n * (PRICE + extra)); f('mN').textContent = `${n} bitar före dekoration`; }
+    f('sumN').textContent = n ? `${n} bitar` : 'Ej valt';
+    f('sumPer').textContent = `${PRICE + extra} kr`;
+    f('sumOcc').textContent = occ ? OCC[occ.value].label : 'Ej valt';
+    const d = days(), sf = f('flowers').checked, band = f('band'), txt = f('bandText');
+    band.className = 'band';
+    if (d === null) txt.textContent = sf ? 'Tårtor med sockerblommor beställs gärna en månad i förväg.' : 'Designtårtor beställs 1-2 veckor i förväg.';
+    else if (d < 0) { band.classList.add('warn'); txt.textContent = 'Det datumet har redan varit. Välj ett kommande datum.'; }
+    else if (sf && d < 30) { band.classList.add('warn'); txt.textContent = `Om ${d} dagar. Sockerblommor behöver helst en månad, men skicka ändå, så ser Fiona vad som hinns.`; }
+    else if (d < 14) { band.classList.add('warn'); txt.textContent = `Om ${d} dagar. Kort varsel, men hör av dig, så ser Fiona vad som går.`; }
+    else { band.classList.add('ok'); txt.textContent = `Om ${d} dagar. Gott om tid.`; }
+    f('sumDate').textContent = f('date').value ? new Date(f('date').value + 'T00:00').toLocaleDateString('sv-SE', {day:'numeric', month:'short'}) : 'Ej valt';
+  }
+  form.addEventListener('input', update);
+  form.addEventListener('change', e => {
+    if (e.target.name === 'occ') store.set('occ', e.target.value);
+    if (['base','m1','m2'].includes(e.target.id)) store.set(e.target.id, e.target.value);
+    if (e.target.id === 'servings') store.set('servings', +e.target.value);
+  });
+  $$('.stepper button').forEach(b => b.addEventListener('click', () => {
+    const i = f('servings'); i.value = Math.min(400, Math.max(4, (parseInt(i.value, 10) || 0) + +b.dataset.d));
+    store.set('servings', +i.value); update();
+  }));
+
+  const rules = [
+    ['occ', () => form.querySelector('input[name=occ]:checked'), 'Vilket tillfälle tårtan är till'],
+    ['date', () => f('date').value && days() >= 0, 'Ett datum som inte redan har varit'],
+    ['servings', () => parseInt(f('servings').value, 10) >= 4, 'Hur många personer (minst 4)'],
+    ['wish', () => f('wish').value.trim().length >= 5, 'Några ord om hur tårtan ska se ut'],
+    ['name', () => f('name').value.trim(), 'Ditt namn'],
+    ['phone', () => f('phone').value.replace(/\D/g,'').length >= 7, 'Ett telefonnummer Fiona kan nå dig på'],
+    ['email', () => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f('email').value.trim()), 'En giltig e-postadress, t.ex. namn@exempel.se'],
+  ];
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const miss = rules.filter(([id, ok]) => { const bad = !ok(); const el = f('w-' + id); if (el) el.setAttribute('aria-invalid', bad); const ctl = id === 'occ' ? null : f(id); if (ctl) ctl.setAttribute('aria-invalid', bad); return bad; });
+    const box = f('errors');
+    if (miss.length) {
+      box.innerHTML = 'Nästan klart. Det här saknas:<ul>' + miss.map(m => `<li>${m[2]}</li>`).join('') + '</ul>';
+      box.hidden = false;
+      const first = miss[0][0] === 'occ' ? form.querySelector('input[name=occ]') : f(miss[0][0]);
+      first && first.focus(); return;
+    }
+    box.hidden = true;
+    const occ = OCC[form.querySelector('input[name=occ]:checked').value];
+    const n = parseInt(f('servings').value, 10);
+    const extra = (f('m1').value === 'Pistage' ? 5 : 0) + (f('m2').value === 'Nougat' ? 5 : 0);
+    const date = new Date(f('date').value + 'T00:00').toLocaleDateString('sv-SE', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+    const body = [
+      'Hej Fiona!', '',
+      `Jag skulle vilja beställa en tårta till ${occ.label.toLowerCase()}, ${date}, för ungefär ${n} personer.`, '',
+      `Botten: ${f('base').value}`,
+      `Mousse 1: ${f('m1').value || 'gärna ett förslag'}`,
+      `Mousse 2: ${f('m2').value || 'gärna ett förslag'}`,
+      `Sockerblommor: ${f('flowers').checked ? 'ja, gärna' : 'nej'}`,
+      `Hämtning/leverans: ${f('pickup').value}`, '',
+      'Så här tänker jag mig tårtan:', f('wish').value.trim(), '',
+      `Uppskattat baspris: ${kr(n * (PRICE + extra))} före dekoration.`, '',
+      'Vänliga hälsningar', f('name').value.trim(), f('phone').value.trim(), f('email').value.trim()
+    ].join('\n');
+    const subject = `Tårtförfrågan: ${occ.label}, ${f('date').value}`;
+    f('resultText').textContent = `Till: kontakt@fionasbakery.se\nÄmne: ${subject}\n\n${body}`;
+    f('mailLink').href = `mailto:kontakt@fionasbakery.se?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    f('copyStatus').textContent = '';
+    f('result').hidden = false;
+    f('result').scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block: 'start'});
+    f('resultHead').focus({preventScroll: true});
+  });
+  f('copyBtn').addEventListener('click', () => {
+    const pre = f('resultText');
+    const sel = () => { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); f('copyStatus').textContent = 'Texten är markerad. Kopiera med ⌘C eller Ctrl+C.'; };
+    try { navigator.clipboard.writeText(pre.textContent).then(() => f('copyStatus').textContent = 'Kopierat. Klistra in i ett mejl till Fiona.', sel); } catch (_) { sel(); }
+  });
+  restore();
+  document.addEventListener('page', e => { if (e.detail === 'bestall') restore(); });
+})();
+
+</script>
