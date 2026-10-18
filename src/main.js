@@ -236,7 +236,7 @@
     if (d === null) txt.textContent = sf ? 'Tårtor med sockerblommor beställs gärna en månad i förväg.' : 'Designtårtor beställs 1-2 veckor i förväg.';
     else if (d < 0) { band.classList.add('warn'); txt.textContent = 'Det datumet har redan varit. Välj ett kommande datum.'; }
     else if (sf && d < 30) { band.classList.add('warn'); txt.textContent = `Om ${d} dagar. Sockerblommor behöver helst en månad, men skicka ändå, så ser Fiona vad som hinns.`; }
-    else if (d < 14) { band.classList.add('warn'); txt.textContent = `Om ${d} dagar. Kort varsel, men hör av dig, så ser Fiona vad som går.`; }
+    else if (d < 7) { band.classList.add('warn'); txt.textContent = `Om ${d} dagar. Kort varsel, men hör av dig, så ser Fiona vad som går.`; }
     else { band.classList.add('ok'); txt.textContent = `Om ${d} dagar. Gott om tid.`; }
     f('sumDate').textContent = f('date').value ? new Date(f('date').value + 'T00:00').toLocaleDateString('sv-SE', {day:'numeric', month:'short'}) : 'Ej valt';
   }
