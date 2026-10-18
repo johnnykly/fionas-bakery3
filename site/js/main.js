@@ -2,7 +2,7 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const DIMS = {"00": [800, 1000], "01": [1000, 561], "02": [1000, 968], "03": [750, 1000], "04": [750, 1000], "05": [1000, 1000], "06": [1000, 750], "07": [1000, 750], "08": [750, 1000], "09": [1000, 750], "10": [750, 1000], "11": [1000, 750], "12": [1000, 750], "13": [1200, 1600], "14": [1200, 1600], "15": [750, 1000], "16": [750, 1000], "19": [750, 1000], "20": [750, 1000], "21": [1000, 699], "22": [1000, 750], "23": [750, 1000], "24": [1000, 1000], "25": [892, 1000], "26": [800, 1000], "27": [800, 1000], "28": [800, 1000], "29": [800, 1000], "30": [1000, 1000], "31": [1000, 782], "32": [1000, 779], "33": [800, 1000], "34": [800, 1000], "35": [800, 1000], "37": [800, 1000], "38": [1000, 1000], "39": [1280, 1600], "40": [800, 1000]};
+  const DIMS = {"00": [800, 1000], "01": [1000, 561], "02": [1000, 968], "03": [750, 1000], "04": [750, 1000], "05": [1000, 1000], "06": [1000, 750], "07": [1000, 750], "08": [750, 1000], "09": [1000, 750], "10": [750, 1000], "11": [1000, 750], "12": [1000, 750], "13": [1200, 1600], "14": [1200, 1600], "15": [750, 1000], "16": [750, 1000], "19": [750, 1000], "20": [750, 1000], "21": [1000, 699], "22": [1000, 750], "23": [750, 1000], "24": [1000, 1000], "25": [892, 1000], "26": [800, 1000], "27": [800, 1000], "28": [800, 1000], "29": [800, 1000], "30": [1000, 1000], "31": [1000, 782], "32": [1000, 779], "33": [800, 1000], "34": [800, 1000], "35": [800, 1000], "37": [800, 1000], "38": [1000, 1000], "39": [1280, 1600], "40": [800, 1000], "41": [1178, 894], "42": [1178, 1032], "43": [1178, 832], "44": [965, 887], "45": [1179, 1256], "46": [1171, 754], "47": [1178, 851], "48": [1030, 1566], "49": [1178, 1442], "50": [1178, 1567]};
   const wh = k => DIMS[k] ? `width="${DIMS[k][0]}" height="${DIMS[k][1]}"` : '';
   const kr = n => n.toLocaleString('sv-SE') + ' kr';
   const PRICE = 60;
@@ -141,6 +141,11 @@
     ['06','Nallar i balett','barn','Modellerade figurer'],['22','Handväska','fest','3D-form'],
     ['21','Cupcakes med tryck','bakelser','Tryck'],['01','Sockerpion','sockerblommor','Sockerblommor'],
     ['10','Gender reveal','barn','Överraskning inuti'],['13','Körsbärsblom i kanna','sockerblommor','Sockerblommor'],
+    ['48','Smörkräm & sockerrosor','brollop','Sockerblommor'],['49','Grön bröllopstårta med sockerblad','brollop','Sockerblommor'],
+    ['50','Sockerrosor & sockerblad','brollop','Sockerblommor'],['45','Grattis till examen','student','3D-detaljer'],
+    ['47','Studentmössa & vinfat','student','3D-form'],['46','Cupcakes med fotspår','barn','Cupcakes'],
+    ['41','Cakesicles & cakepops i blått','bakelser','Cakepops'],['42','Mousse med äppelchips','bakelser','Logotyp'],
+    ['43','Mousse med rosa swirl','bakelser','Logotyp'],['44','Frukter i mousse','bakelser','Formade bakelser'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');

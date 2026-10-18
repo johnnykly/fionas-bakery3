@@ -141,6 +141,11 @@
     ['06','Nallar i balett','barn','Modellerade figurer'],['22','Handväska','fest','3D-form'],
     ['21','Cupcakes med tryck','bakelser','Tryck'],['01','Sockerpion','sockerblommor','Sockerblommor'],
     ['10','Gender reveal','barn','Överraskning inuti'],['13','Körsbärsblom i kanna','sockerblommor','Sockerblommor'],
+    ['48','Smörkräm & sockerrosor','brollop','Sockerblommor'],['49','Grön bröllopstårta med sockerblad','brollop','Sockerblommor'],
+    ['50','Sockerrosor & sockerblad','brollop','Sockerblommor'],['45','Grattis till examen','student','3D-detaljer'],
+    ['47','Studentmössa & vinfat','student','3D-form'],['46','Cupcakes med fotspår','barn','Cupcakes'],
+    ['41','Cakesicles & cakepops i blått','bakelser','Cakepops'],['42','Mousse med äppelchips','bakelser','Logotyp'],
+    ['43','Mousse med rosa swirl','bakelser','Logotyp'],['44','Frukter i mousse','bakelser','Formade bakelser'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');
