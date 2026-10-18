@@ -97,9 +97,10 @@ TARTOR = f'''
       <h1>Våra tårtor</h1>
       <p class="lede measure" style="margin-top:16px">Bröllopstårtor, barntårtor, studenttårtor och tårtor med handgjorda sockerblommor, bakade i Arlöv.</p>
     </div>
-    <p class="num" id="count" aria-live="polite" style="font-weight:600;justify-self:end">36 tårtor</p>
+    <p class="num" id="count" aria-live="polite" style="font-weight:600;justify-self:end">79 tårtor</p>
     <ul class="pots filters" id="filters" aria-label="Visa tårtor för" style="grid-column:1/-1"></ul>
     <div class="grid" id="grid"></div>
+    <p class="lede" style="grid-column:1/-1;margin-top:clamp(20px,3vw,32px);text-align:center">Vill du se fler bilder? Följ Fiona på Instagram: <a href="https://www.instagram.com/fionasbakery/" rel="noopener" target="_blank"><b>@fionasbakery</b></a></p>
   </div>
 </div>
 <section class="wrap close" aria-labelledby="t-close">
