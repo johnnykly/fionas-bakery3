@@ -146,6 +146,8 @@
     ['47','Studentmössa & vinfat','student','3D-form'],['46','Cupcakes med fotspår','barn','Cupcakes'],
     ['41','Cakesicles & cakepops i blått','bakelser','Cakepops'],['42','Mousse med äppelchips','bakelser','Logotyp'],
     ['43','Mousse med rosa swirl','bakelser','Logotyp'],['44','Frukter i mousse','bakelser','Formade bakelser'],
+    ['51','Nalle med kulor & fjärilar','barn','Tryckt motiv'],['52','Baby girl & baby boy','barn','Modellerade figurer'],
+    ['53','Hobbitstugan','fest','Modellerade detaljer'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');
