@@ -148,6 +148,16 @@
     ['43','Mousse med rosa swirl','bakelser','Logotyp'],['44','Frukter i mousse','bakelser','Formade bakelser'],
     ['51','Nalle med kulor & fjärilar','barn','Tryckt motiv'],['52','Baby girl & baby boy','barn','Modellerade figurer'],
     ['53','Hobbitstugan','fest','Modellerade detaljer'],
+    ['54','Nalle & kulor till ettåring','barn','Modellerade figurer'],['55','Examen med gulddrip','student','Drip & bladguld'],
+    ['56','Drip med strut & macarons','fest','Drip'],['57','Quiltad med färska rosor','fest','Färska blommor'],
+    ['58','Tecknad tårta','fest','3D-form'],['59','Kostym i rutigt','fest','Tryck'],
+    ['60','Smoking med guldfluga','fest','3D-form'],['61','Student med champagne','student','Färska blommor'],
+    ['62','Presentask i svart & vitt','fest','3D-form'],['63','Presentask i guld & rött','fest','3D-form'],
+    ['64','Sjöjungfru till sjuåring','barn','Modellerade figurer'],['65','Spindelhjältar','barn','Modellerade figurer'],
+    ['66','Examen med rosettgrädde','student','3D-detaljer'],['67','Sjöjungfru på vågor','barn','Modellerade figurer'],
+    ['68','Krona till sex år','barn','3D-detaljer'],['69','Nalle i luftballong','barn','Modellerade figurer'],
+    ['70','Nalle & rosa kulor','barn','Modellerade figurer'],['71','Narval under regnbågen','barn','Modellerade figurer'],
+    ['72','Elefant med cirkusmotiv','barn','Modellerade figurer'],['73','Doptårta med nalle & ballonger','barn','Modellerade figurer'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');
