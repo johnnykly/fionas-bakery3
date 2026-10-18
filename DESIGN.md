@@ -155,7 +155,7 @@ The site is tinted like Fiona's sugarpaste. Every region of a page is a rolled s
 
 Hierarchy comes from overlap, not from boxes. A photo slab lifts over the edge of a text slab; a range of cake slabs steps down across a pistachio ground and spills into the next section. The only elevation in the world is that lift. Romance (bröllop, sockerblommor) and play (barnkalas, student, fest) share one palette, so the site is never wedding-only and never childish.
 
-The world is single-theme and light by design: paste is pale, ink is deep, and there is no dark mode to maintain. The one dark surface is the plum footer slab, which reads as the gel bottle rather than a theme.
+The world is single-theme and light by design: paste is pale, ink is deep, and there is no dark mode to maintain. There are no dark surfaces; the footer is a crème (rose) slab like the rest.
 
 **Key Characteristics:**
 - Whole-region paste slabs (radius clamp(22px,3vw,40px)) separated by 12–20px seams, never full-bleed white sections.
@@ -173,7 +173,7 @@ A pastel paste family for grounds, one gel ring per paste for emphasis, and two 
 - **Berry Gel** (berry): the action colour. Primary pill buttons, the "Beställ" nav tab, links, focus outlines, range-thumb ring, the checked toggle, invalid-field rings, caret. Hover and pressed states deepen to **Deep Berry** (berry-deep), which also colours inline error text.
 
 ### Neutral
-- **Plum Ink** (plum): all headings and body text, the line button, the selected chip, the footer slab ground.
+- **Plum Ink** (plum): all headings and body text, the line button, the selected chip.
 - **Soft Plum** (plum-soft): secondary copy – ledes on sugar, captions, `dt` labels, scale ticks.
 - **Sugar** (sugar): page ground, inner cards inside slabs (meter, summary, steps, FAQ at rest), tags, fields, and text on berry/plum.
 - **Paste Line** (line): the 1.5px inset hairline on chips, closed FAQ rows and FAQ toggles. Fields use the same plum at 12% (30% on hover).
@@ -273,7 +273,7 @@ Round, confident pills.
 - **Selected:** plum fill, sugar text, no ring. Used for flavour choices.
 
 ### Cards / Containers
-There are no boxed cards. Containers are slabs: paste ground, slab radius, slab padding, no border, flat unless overlapping (then the lift). Nested content sits on sugar or paste at the inner radius. The footer is a plum slab with sugar text.
+There are no boxed cards. Containers are slabs: paste ground, slab radius, slab padding, no border, flat unless overlapping (then the lift). Nested content sits on sugar or paste at the inner radius. The footer is a crème (rose) slab with plum text.
 
 ### Inputs / Fields
 - **Style:** sugar fill, 14px radius, Figtree 500 1rem plum, 1.5px inset ring at 12% plum (30% on hover).
