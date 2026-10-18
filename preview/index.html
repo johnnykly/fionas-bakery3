@@ -431,7 +431,7 @@ main:focus{outline:none}
       </div>
       <div class="picker">
         <h2>Vad firar ni? Välj och se vad Fiona har gjort.</h2>
-        <ul class="pots"><li><button type="button" class="pot c-rose" data-occ="brollop" aria-pressed="true"><i></i>Bröllop</button></li><li><button type="button" class="pot c-butter" data-occ="barn" aria-pressed="false"><i></i>Barnkalas & dop</button></li><li><button type="button" class="pot c-butter" data-occ="fest" aria-pressed="false"><i></i>Födelsedag</button></li><li><button type="button" class="pot c-pistachio" data-occ="student" aria-pressed="false"><i></i>Student</button></li><li><button type="button" class="pot c-pistachio" data-occ="bakelser" aria-pressed="false"><i></i>Företag & event</button></li></ul>
+        <ul class="pots"><li><button type="button" class="pot c-rose" data-occ="brollop" aria-pressed="true"><i></i>Bröllop</button></li><li><button type="button" class="pot c-butter" data-occ="barn" aria-pressed="false"><i></i>Barnkalas & dop</button></li><li><button type="button" class="pot c-butter" data-occ="fest" aria-pressed="false"><i></i>Födelsedag</button></li><li><button type="button" class="pot c-pistachio" data-occ="student" aria-pressed="false"><i></i>Student</button></li><li><button type="button" class="pot c-pistachio" data-occ="bakelser" aria-pressed="false"><i></i>Bakelser</button></li></ul>
       </div>
     </div>
     <figure class="photo slab">
@@ -453,7 +453,7 @@ main:focus{outline:none}
     <figure><div class="slab c-rose"><img src="img/02.webp" width="1000" height="968" alt="Bröllopstårta med pioner och rosor i socker" loading="lazy"></div><figcaption>Pioner och rosor i socker<span>Bröllop</span></figcaption></figure>
     <figure><div class="slab c-rose"><img src="img/16.webp" width="750" height="1000" alt="Barntårta med Mario-figurer i sockerpasta" loading="lazy"></div><figcaption>Mario-äventyr<span>Barnkalas</span></figcaption></figure>
     <figure><div class="slab c-butter"><img src="img/40.webp" width="800" height="1000" alt="Födelsedagstårta formad som ett roulettebord" loading="lazy"></div><figcaption>Roulette<span>Födelsedag</span></figcaption></figure>
-    <figure><div class="slab c-pistachio"><img src="img/07.webp" width="1000" height="750" alt="Cupcakes med monogram till företagsevent" loading="lazy"></div><figcaption>Cupcakes med monogram<span>Företag</span></figcaption></figure>
+    <figure><div class="slab c-pistachio"><img src="img/07.webp" width="1000" height="750" alt="Cupcakes med monogram till bröllop" loading="lazy"></div><figcaption>Cupcakes med monogram<span>Bröllop</span></figcaption></figure>
   </div>
  </div>
 </section>
@@ -633,7 +633,7 @@ main:focus{outline:none}
     <form id="orderForm" novalidate>
       <fieldset class="fs field" id="w-occ">
         <legend>Vad ska ni fira?</legend>
-        <ul class="pots"><li><label class="pot c-rose"><input type="radio" name="occ" value="brollop"><i></i>Bröllop</label></li><li><label class="pot c-butter"><input type="radio" name="occ" value="barn"><i></i>Barnkalas & dop</label></li><li><label class="pot c-butter"><input type="radio" name="occ" value="fest"><i></i>Födelsedag</label></li><li><label class="pot c-pistachio"><input type="radio" name="occ" value="student"><i></i>Student</label></li><li><label class="pot c-pistachio"><input type="radio" name="occ" value="bakelser"><i></i>Företag & event</label></li></ul>
+        <ul class="pots"><li><label class="pot c-rose"><input type="radio" name="occ" value="brollop"><i></i>Bröllop</label></li><li><label class="pot c-butter"><input type="radio" name="occ" value="barn"><i></i>Barnkalas & dop</label></li><li><label class="pot c-butter"><input type="radio" name="occ" value="fest"><i></i>Födelsedag</label></li><li><label class="pot c-pistachio"><input type="radio" name="occ" value="student"><i></i>Student</label></li><li><label class="pot c-pistachio"><input type="radio" name="occ" value="bakelser"><i></i>Bakelser</label></li></ul>
       </fieldset>
       <div class="fs row2">
         <div class="field" id="w-date">
@@ -662,6 +662,11 @@ main:focus{outline:none}
       <div class="fs field" id="w-wish">
         <label class="lbl" for="wish">Hur tänker du dig tårtan?</label>
         <textarea id="wish" aria-required="true" aria-describedby="errors" placeholder="Tema, färger, text på tårtan, allergier …"></textarea>
+      </div>
+      <div class="fs field">
+        <label class="lbl" for="inspo">Inspirationsbild <small>(valfritt)</small></label>
+        <input type="url" id="inspo" inputmode="url" placeholder="Klistra in en länk, t.ex. från Pinterest eller Instagram">
+        <p class="fine-note" style="margin-top:0">Har du bilden i mobilen? Bifoga den i mejlet som öppnas när du skickar förfrågan, så ser Fiona precis vad du tänker dig.</p>
       </div>
       <div class="fs field">
         <label class="lbl" for="pickup">Hämtning</label>
@@ -764,7 +769,7 @@ main:focus{outline:none}
     barn:     {label:'Barnkalas & dop',    c:'butter',    c2:'rose',      img:'28', tag:'Modellerade figurer', title:'Barntårtor'},
     fest:     {label:'Födelsedag',         c:'butter',    c2:'pistachio', img:'30', tag:'Marmor & färska blommor', title:'Födelsedagstårtor'},
     student:  {label:'Student',            c:'pistachio', c2:'rose',      img:'34', tag:'Studentmössa i sockerpasta', title:'Studenttårtor'},
-    bakelser: {label:'Företag & event',    c:'pistachio', c2:'butter',    img:'07', tag:'Monogram & logga', title:'Bakelser med logga'},
+    bakelser: {label:'Bakelser',           c:'pistachio', c2:'butter',    img:'31', tag:'Cakepops & macarons', title:'Bakelser'},
   };
   const cssVar = c => `var(--${c})`;
 
@@ -856,7 +861,7 @@ main:focus{outline:none}
   }
 
   /* ---------- GALLERY ---------- */
-  const CATS = {alla:['Alla','sugar'], brollop:['Bröllop','rose'], sockerblommor:['Sockerblommor','rose'], barn:['Barn & dop','butter'], fest:['Fest & jubileum','butter'], student:['Student','pistachio'], bakelser:['Bakelser & företag','pistachio']};
+  const CATS = {alla:['Alla','sugar'], brollop:['Bröllop','rose'], sockerblommor:['Sockerblommor','rose'], barn:['Barn & dop','butter'], fest:['Fest & jubileum','butter'], student:['Student','pistachio'], bakelser:['Bakelser','pistachio']};
   const WORKS = [
     ['39','Skulpterat socker & körsbärsblom','brollop','Skulpterat socker',1],['28','Valpar till Hector','barn','Modellerade figurer'],
     ['08','Designerväskor','fest','3D-form'],['02','Pioner och rosor','sockerblommor','Sockerblommor'],
@@ -865,7 +870,7 @@ main:focus{outline:none}
     ['31','Cakepops med guldstänk','bakelser','Cakepops'],['34','Studentmössa med rosor','student','3D-form'],
     ['14','Körsbärsblommor','sockerblommor','Sockerblommor'],['23','Leia fyller tre','barn','Modellerade figurer'],
     ['00','Tre våningar med sockerrosor','brollop','Sockerblommor',1],['33','Monogram i marinblått','fest','Mönster'],
-    ['04','Vildblommor & spets','brollop','Färska blommor'],['07','Cupcakes med monogram','bakelser','Monogram'],
+    ['04','Vildblommor & spets','brollop','Färska blommor'],['07','Cupcakes med monogram','brollop','Cupcakes'],
     ['24','Bondgården','barn','Modellerade figurer'],['25','Bokstapel','fest','3D-form'],
     ['12','Sockerrosor i blush','sockerblommor','Sockerblommor'],['20','Kattunge med rosett','barn','Modellerad figur'],
     ['40','Roulette','fest','3D-form',1],['03','Pion & bladguld','brollop','Drip & bladguld'],
@@ -873,9 +878,10 @@ main:focus{outline:none}
     ['29','Happy Birthday i guld','fest','Bladguld'],['35','Blå sockerros','sockerblommor','Sockerblommor'],
     ['38','Studentmössa','student','3D-form'],['19','Liten drake','barn','Modellerad figur'],
     ['32','Maränglollipops','bakelser','Maräng'],['15','Artonårstårta','fest','3D-detaljer'],
-    ['27','Nalle & bokstavsklossar','barn','Modellerade figurer'],['11','Cupcakes med logga','bakelser','Logga'],
+    ['27','Nalle & bokstavsklossar','barn','Modellerade figurer'],['11','Cupcakes med monogram','brollop','Cupcakes'],
     ['06','Nallar i balett','barn','Modellerade figurer'],['22','Handväska','fest','3D-form'],
     ['21','Cupcakes med tryck','bakelser','Tryck'],['01','Sockerpion','sockerblommor','Sockerblommor'],
+    ['10','Gender reveal','barn','Överraskning inuti'],['13','Körsbärsblom i kanna','sockerblommor','Sockerblommor'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');
@@ -1020,6 +1026,7 @@ main:focus{outline:none}
       `Sockerblommor: ${f('flowers').checked ? 'ja, gärna' : 'nej'}`,
       `Hämtning/leverans: ${f('pickup').value}`, '',
       'Så här tänker jag mig tårtan:', f('wish').value.trim(), '',
+      ...(f('inspo').value.trim() ? [`Inspirationsbild: ${f('inspo').value.trim()}`, ''] : []),
       `Uppskattat baspris: ${kr(n * (PRICE + extra))} före dekoration.`, '',
       'Vänliga hälsningar', f('name').value.trim(), f('phone').value.trim(), f('email').value.trim()
     ].join('\n');

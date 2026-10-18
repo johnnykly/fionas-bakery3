@@ -12,7 +12,7 @@ A = '<span class="ico">' + ICON['arrow'] + '</span>'
 
 POTS_HOME = ''.join(
     f'<li><button type="button" class="pot c-{c}" data-occ="{k}" aria-pressed="{str(k=="brollop").lower()}"><i></i>{label}</button></li>'
-    for k, c, label in [('brollop','rose','Bröllop'),('barn','butter','Barnkalas & dop'),('fest','butter','Födelsedag'),('student','pistachio','Student'),('bakelser','pistachio','Företag & event')])
+    for k, c, label in [('brollop','rose','Bröllop'),('barn','butter','Barnkalas & dop'),('fest','butter','Födelsedag'),('student','pistachio','Student'),('bakelser','pistachio','Bakelser')])
 
 HEM = f'''
 <div class="wrap">
@@ -48,7 +48,7 @@ HEM = f'''
     <figure><div class="slab c-rose"><img src="img/02.jpg" alt="Bröllopstårta med pioner och rosor i socker" loading="lazy"></div><figcaption>Pioner och rosor i socker<span>Bröllop</span></figcaption></figure>
     <figure><div class="slab c-rose"><img src="img/16.jpg" alt="Barntårta med Mario-figurer i sockerpasta" loading="lazy"></div><figcaption>Mario-äventyr<span>Barnkalas</span></figcaption></figure>
     <figure><div class="slab c-butter"><img src="img/40.jpg" alt="Födelsedagstårta formad som ett roulettebord" loading="lazy"></div><figcaption>Roulette<span>Födelsedag</span></figcaption></figure>
-    <figure><div class="slab c-pistachio"><img src="img/07.jpg" alt="Cupcakes med monogram till företagsevent" loading="lazy"></div><figcaption>Cupcakes med monogram<span>Företag</span></figcaption></figure>
+    <figure><div class="slab c-pistachio"><img src="img/07.jpg" alt="Cupcakes med monogram till bröllop" loading="lazy"></div><figcaption>Cupcakes med monogram<span>Bröllop</span></figcaption></figure>
   </div>
  </div>
 </section>
@@ -234,7 +234,7 @@ FRAGOR = '''
 
 POTS_ORDER = ''.join(
     f'<li><label class="pot c-{c}"><input type="radio" name="occ" value="{k}"><i></i>{label}</label></li>'
-    for k, c, label in [('brollop','rose','Bröllop'),('barn','butter','Barnkalas & dop'),('fest','butter','Födelsedag'),('student','pistachio','Student'),('bakelser','pistachio','Företag & event')])
+    for k, c, label in [('brollop','rose','Bröllop'),('barn','butter','Barnkalas & dop'),('fest','butter','Födelsedag'),('student','pistachio','Student'),('bakelser','pistachio','Bakelser')])
 
 def opts(items, first):
     return f'<option value="">{first}</option>' + ''.join(f'<option value="{v}">{v}{" (+5 kr/bit)" if e else ""}</option>' for v, e in items)
@@ -276,6 +276,11 @@ BESTALL = f'''
       <div class="fs field" id="w-wish">
         <label class="lbl" for="wish">Hur tänker du dig tårtan?</label>
         <textarea id="wish" aria-required="true" aria-describedby="errors" placeholder="Tema, färger, text på tårtan, allergier …"></textarea>
+      </div>
+      <div class="fs field">
+        <label class="lbl" for="inspo">Inspirationsbild <small>(valfritt)</small></label>
+        <input type="url" id="inspo" inputmode="url" placeholder="Klistra in en länk, t.ex. från Pinterest eller Instagram">
+        <p class="fine-note" style="margin-top:0">Har du bilden i mobilen? Bifoga den i mejlet som öppnas när du skickar förfrågan, så ser Fiona precis vad du tänker dig.</p>
       </div>
       <div class="fs field">
         <label class="lbl" for="pickup">Hämtning</label>

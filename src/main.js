@@ -28,7 +28,7 @@
     barn:     {label:'Barnkalas & dop',    c:'butter',    c2:'rose',      img:'28', tag:'Modellerade figurer', title:'Barntårtor'},
     fest:     {label:'Födelsedag',         c:'butter',    c2:'pistachio', img:'30', tag:'Marmor & färska blommor', title:'Födelsedagstårtor'},
     student:  {label:'Student',            c:'pistachio', c2:'rose',      img:'34', tag:'Studentmössa i sockerpasta', title:'Studenttårtor'},
-    bakelser: {label:'Företag & event',    c:'pistachio', c2:'butter',    img:'07', tag:'Monogram & logga', title:'Bakelser med logga'},
+    bakelser: {label:'Bakelser',           c:'pistachio', c2:'butter',    img:'31', tag:'Cakepops & macarons', title:'Bakelser'},
   };
   const cssVar = c => `var(--${c})`;
 
@@ -120,7 +120,7 @@
   }
 
   /* ---------- GALLERY ---------- */
-  const CATS = {alla:['Alla','sugar'], brollop:['Bröllop','rose'], sockerblommor:['Sockerblommor','rose'], barn:['Barn & dop','butter'], fest:['Fest & jubileum','butter'], student:['Student','pistachio'], bakelser:['Bakelser & företag','pistachio']};
+  const CATS = {alla:['Alla','sugar'], brollop:['Bröllop','rose'], sockerblommor:['Sockerblommor','rose'], barn:['Barn & dop','butter'], fest:['Fest & jubileum','butter'], student:['Student','pistachio'], bakelser:['Bakelser','pistachio']};
   const WORKS = [
     ['39','Skulpterat socker & körsbärsblom','brollop','Skulpterat socker',1],['28','Valpar till Hector','barn','Modellerade figurer'],
     ['08','Designerväskor','fest','3D-form'],['02','Pioner och rosor','sockerblommor','Sockerblommor'],
@@ -129,7 +129,7 @@
     ['31','Cakepops med guldstänk','bakelser','Cakepops'],['34','Studentmössa med rosor','student','3D-form'],
     ['14','Körsbärsblommor','sockerblommor','Sockerblommor'],['23','Leia fyller tre','barn','Modellerade figurer'],
     ['00','Tre våningar med sockerrosor','brollop','Sockerblommor',1],['33','Monogram i marinblått','fest','Mönster'],
-    ['04','Vildblommor & spets','brollop','Färska blommor'],['07','Cupcakes med monogram','bakelser','Monogram'],
+    ['04','Vildblommor & spets','brollop','Färska blommor'],['07','Cupcakes med monogram','brollop','Cupcakes'],
     ['24','Bondgården','barn','Modellerade figurer'],['25','Bokstapel','fest','3D-form'],
     ['12','Sockerrosor i blush','sockerblommor','Sockerblommor'],['20','Kattunge med rosett','barn','Modellerad figur'],
     ['40','Roulette','fest','3D-form',1],['03','Pion & bladguld','brollop','Drip & bladguld'],
@@ -137,9 +137,10 @@
     ['29','Happy Birthday i guld','fest','Bladguld'],['35','Blå sockerros','sockerblommor','Sockerblommor'],
     ['38','Studentmössa','student','3D-form'],['19','Liten drake','barn','Modellerad figur'],
     ['32','Maränglollipops','bakelser','Maräng'],['15','Artonårstårta','fest','3D-detaljer'],
-    ['27','Nalle & bokstavsklossar','barn','Modellerade figurer'],['11','Cupcakes med logga','bakelser','Logga'],
+    ['27','Nalle & bokstavsklossar','barn','Modellerade figurer'],['11','Cupcakes med monogram','brollop','Cupcakes'],
     ['06','Nallar i balett','barn','Modellerade figurer'],['22','Handväska','fest','3D-form'],
     ['21','Cupcakes med tryck','bakelser','Tryck'],['01','Sockerpion','sockerblommor','Sockerblommor'],
+    ['10','Gender reveal','barn','Överraskning inuti'],['13','Körsbärsblom i kanna','sockerblommor','Sockerblommor'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');
@@ -284,6 +285,7 @@
       `Sockerblommor: ${f('flowers').checked ? 'ja, gärna' : 'nej'}`,
       `Hämtning/leverans: ${f('pickup').value}`, '',
       'Så här tänker jag mig tårtan:', f('wish').value.trim(), '',
+      ...(f('inspo').value.trim() ? [`Inspirationsbild: ${f('inspo').value.trim()}`, ''] : []),
       `Uppskattat baspris: ${kr(n * (PRICE + extra))} före dekoration.`, '',
       'Vänliga hälsningar', f('name').value.trim(), f('phone').value.trim(), f('email').value.trim()
     ].join('\n');
