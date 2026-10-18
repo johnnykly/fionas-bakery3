@@ -122,6 +122,7 @@
   /* ---------- GALLERY ---------- */
   const CATS = {alla:['Alla','sugar'], brollop:['Bröllop','rose'], sockerblommor:['Sockerblommor','rose'], barn:['Barn & dop','butter'], fest:['Fest & jubileum','butter'], student:['Student','pistachio'], bakelser:['Bakelser','pistachio']};
   const WORKS = [
+    ['50','Sockerrosor & sockerblad','brollop','Sockerblommor'],
     ['39','Skulpterat socker & körsbärsblom','brollop','Skulpterat socker',1],['28','Valpar till Hector','barn','Modellerade figurer'],
     ['08','Designerväskor','fest','3D-form'],['02','Pioner och rosor','sockerblommor','Sockerblommor'],
     ['05','Babyshower med nallar','barn','Modellerade figurer'],['16','Mario-äventyr','barn','Modellerade figurer',1],
@@ -142,7 +143,7 @@
     ['21','Cupcakes med tryck','bakelser','Tryck'],['01','Sockerpion','sockerblommor','Sockerblommor'],
     ['10','Gender reveal','barn','Överraskning inuti'],['13','Körsbärsblom i kanna','sockerblommor','Sockerblommor'],
     ['48','Smörkräm & sockerrosor','brollop','Sockerblommor'],['49','Grön bröllopstårta med sockerblad','brollop','Sockerblommor'],
-    ['50','Sockerrosor & sockerblad','brollop','Sockerblommor'],['45','Grattis till examen','student','3D-detaljer'],
+    ['45','Grattis till examen','student','3D-detaljer'],
     ['47','Studentmössa & vinfat','student','3D-form'],['46','Cupcakes med fotspår','barn','Cupcakes'],
     ['41','Cakesicles & cakepops i blått','bakelser','Cakepops'],['42','Mousse med äppelchips','bakelser','Logotyp'],
     ['43','Mousse med rosa swirl','bakelser','Logotyp'],['44','Frukter i mousse','bakelser','Formade bakelser'],
@@ -158,6 +159,10 @@
     ['68','Krona till sex år','barn','3D-detaljer'],['69','Nalle i luftballong','barn','Modellerade figurer'],
     ['70','Nalle & rosa kulor','barn','Modellerade figurer'],['71','Narval under regnbågen','barn','Modellerade figurer'],
     ['72','Elefant med cirkusmotiv','barn','Modellerade figurer'],['73','Doptårta med nalle & ballonger','barn','Modellerade figurer'],
+    ['74','Vågig dekor & färska blommor','fest','Färska blommor'],['75','Pippi-tårta','barn','Tryckt motiv'],
+    ['76','Regnbåge & figurer','barn','Modellerade figurer'],['77','Magisterexamen','student','Färska blommor'],
+    ['78','Rosa tvåvåningstårta med nalle','barn','Modellerade figurer'],['79','Flaska i socker','fest','3D-form'],
+    ['80','Doptårta med nalle & kors','barn','Modellerade figurer'],['81','Ballerina & rosa kulor','barn','Tryckt motiv'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');

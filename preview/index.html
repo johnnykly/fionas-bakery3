@@ -743,7 +743,7 @@ main:focus{outline:none}
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const DIMS = {"00": [800, 1000], "01": [1000, 561], "02": [1000, 968], "03": [750, 1000], "04": [750, 1000], "05": [1000, 1000], "06": [1000, 750], "07": [1000, 750], "08": [750, 1000], "09": [1000, 750], "10": [750, 1000], "11": [1000, 750], "12": [1000, 750], "13": [1200, 1600], "14": [1200, 1600], "15": [750, 1000], "16": [750, 1000], "19": [750, 1000], "20": [750, 1000], "21": [1000, 699], "22": [1000, 750], "23": [750, 1000], "24": [1000, 1000], "25": [892, 1000], "26": [800, 1000], "27": [800, 1000], "28": [800, 1000], "29": [800, 1000], "30": [1000, 1000], "31": [1000, 782], "32": [1000, 779], "33": [800, 1000], "34": [800, 1000], "35": [800, 1000], "37": [800, 1000], "38": [1000, 1000], "39": [1280, 1600], "40": [800, 1000], "41": [1178, 894], "42": [1178, 1032], "43": [1178, 832], "44": [965, 887], "45": [1179, 1256], "46": [1171, 754], "47": [1178, 851], "48": [1030, 1566], "49": [1178, 1442], "50": [1178, 1567], "51": [1178, 1567], "52": [1178, 935], "53": [1178, 1597], "54": [1173, 1293], "55": [1173, 1168], "56": [1173, 1429], "57": [1147, 1465], "58": [1159, 1214], "59": [1173, 1465], "60": [1173, 1465], "61": [1173, 1342], "62": [1173, 1465], "63": [1173, 1465], "64": [1173, 1421], "65": [1173, 1465], "66": [1173, 1465], "67": [1173, 1465], "68": [1173, 1465], "69": [1173, 1465], "70": [1173, 1465], "71": [1173, 1465], "72": [1173, 1562], "73": [1173, 1562]};
+  const DIMS = {"00": [800, 1000], "01": [1000, 561], "02": [1000, 968], "03": [750, 1000], "04": [750, 1000], "05": [1000, 1000], "06": [1000, 750], "07": [1000, 750], "08": [750, 1000], "09": [1000, 750], "10": [750, 1000], "11": [1000, 750], "12": [1000, 750], "13": [1200, 1600], "14": [1200, 1600], "15": [750, 1000], "16": [750, 1000], "19": [750, 1000], "20": [750, 1000], "21": [1000, 699], "22": [1000, 750], "23": [750, 1000], "24": [1000, 1000], "25": [892, 1000], "26": [800, 1000], "27": [800, 1000], "28": [800, 1000], "29": [800, 1000], "30": [1000, 1000], "31": [1000, 782], "32": [1000, 779], "33": [800, 1000], "34": [800, 1000], "35": [800, 1000], "37": [800, 1000], "38": [1000, 1000], "39": [1280, 1600], "40": [800, 1000], "41": [1178, 894], "42": [1178, 1032], "43": [1178, 832], "44": [965, 887], "45": [1179, 1256], "46": [1171, 754], "47": [1178, 851], "48": [1030, 1566], "49": [1178, 1442], "50": [1178, 1567], "51": [1178, 1567], "52": [1178, 935], "53": [1178, 1597], "54": [1173, 1293], "55": [1173, 1168], "56": [1173, 1429], "57": [1147, 1465], "58": [1159, 1214], "59": [1173, 1465], "60": [1173, 1465], "61": [1173, 1342], "62": [1173, 1465], "63": [1173, 1465], "64": [1173, 1421], "65": [1173, 1465], "66": [1173, 1465], "67": [1173, 1465], "68": [1173, 1465], "69": [1173, 1465], "70": [1173, 1465], "71": [1173, 1465], "72": [1173, 1562], "73": [1173, 1562], "74": [1173, 1562], "75": [1173, 1562], "76": [1173, 1562], "77": [1173, 1562], "78": [1173, 1562], "79": [1173, 1562], "80": [1173, 1562], "81": [1173, 1562]};
   const wh = k => DIMS[k] ? `width="${DIMS[k][0]}" height="${DIMS[k][1]}"` : '';
   const kr = n => n.toLocaleString('sv-SE') + ' kr';
   const PRICE = 60;
@@ -863,6 +863,7 @@ main:focus{outline:none}
   /* ---------- GALLERY ---------- */
   const CATS = {alla:['Alla','sugar'], brollop:['Bröllop','rose'], sockerblommor:['Sockerblommor','rose'], barn:['Barn & dop','butter'], fest:['Fest & jubileum','butter'], student:['Student','pistachio'], bakelser:['Bakelser','pistachio']};
   const WORKS = [
+    ['50','Sockerrosor & sockerblad','brollop','Sockerblommor'],
     ['39','Skulpterat socker & körsbärsblom','brollop','Skulpterat socker',1],['28','Valpar till Hector','barn','Modellerade figurer'],
     ['08','Designerväskor','fest','3D-form'],['02','Pioner och rosor','sockerblommor','Sockerblommor'],
     ['05','Babyshower med nallar','barn','Modellerade figurer'],['16','Mario-äventyr','barn','Modellerade figurer',1],
@@ -883,7 +884,7 @@ main:focus{outline:none}
     ['21','Cupcakes med tryck','bakelser','Tryck'],['01','Sockerpion','sockerblommor','Sockerblommor'],
     ['10','Gender reveal','barn','Överraskning inuti'],['13','Körsbärsblom i kanna','sockerblommor','Sockerblommor'],
     ['48','Smörkräm & sockerrosor','brollop','Sockerblommor'],['49','Grön bröllopstårta med sockerblad','brollop','Sockerblommor'],
-    ['50','Sockerrosor & sockerblad','brollop','Sockerblommor'],['45','Grattis till examen','student','3D-detaljer'],
+    ['45','Grattis till examen','student','3D-detaljer'],
     ['47','Studentmössa & vinfat','student','3D-form'],['46','Cupcakes med fotspår','barn','Cupcakes'],
     ['41','Cakesicles & cakepops i blått','bakelser','Cakepops'],['42','Mousse med äppelchips','bakelser','Logotyp'],
     ['43','Mousse med rosa swirl','bakelser','Logotyp'],['44','Frukter i mousse','bakelser','Formade bakelser'],
@@ -899,6 +900,10 @@ main:focus{outline:none}
     ['68','Krona till sex år','barn','3D-detaljer'],['69','Nalle i luftballong','barn','Modellerade figurer'],
     ['70','Nalle & rosa kulor','barn','Modellerade figurer'],['71','Narval under regnbågen','barn','Modellerade figurer'],
     ['72','Elefant med cirkusmotiv','barn','Modellerade figurer'],['73','Doptårta med nalle & ballonger','barn','Modellerade figurer'],
+    ['74','Vågig dekor & färska blommor','fest','Färska blommor'],['75','Pippi-tårta','barn','Tryckt motiv'],
+    ['76','Regnbåge & figurer','barn','Modellerade figurer'],['77','Magisterexamen','student','Färska blommor'],
+    ['78','Rosa tvåvåningstårta med nalle','barn','Modellerade figurer'],['79','Flaska i socker','fest','3D-form'],
+    ['80','Doptårta med nalle & kors','barn','Modellerade figurer'],['81','Ballerina & rosa kulor','barn','Tryckt motiv'],
   ];
   const KW = {brollop:'Bröllopstårta', sockerblommor:'Tårta med sockerblommor', barn:'Barntårta', fest:'Festtårta', student:'Studenttårta', bakelser:'Bakelser'};
   const grid = $('#grid');
