@@ -7,7 +7,7 @@
       "berry": {
         "role": "primary",
         "displayName": "Berry Gel",
-        "canonical": "#B22A47",
+        "canonical": "#7E4E31",
         "oklch": "oklch(50.9% 0.171 14.0)",
         "tonalRamp": [
           "#200004",
@@ -23,7 +23,7 @@
       "berry-deep": {
         "role": "primary",
         "displayName": "Deep Berry",
-        "canonical": "#8E1C36",
+        "canonical": "#613A23",
         "oklch": "oklch(42.8% 0.148 13.8)",
         "tonalRamp": [
           "#200004",
@@ -39,7 +39,7 @@
       "plum": {
         "role": "neutral",
         "displayName": "Plum Ink",
-        "canonical": "#2E2446",
+        "canonical": "#3B2A21",
         "oklch": "oklch(28.9% 0.061 295.9)",
         "tonalRamp": [
           "#0E0421",
@@ -55,12 +55,12 @@
       "plum-soft": {
         "role": "neutral",
         "displayName": "Soft Plum",
-        "canonical": "#463B5E",
+        "canonical": "#5E4B40",
         "oklch": "oklch(37.9% 0.060 297.9)",
         "tonalRamp": [
           "#0F0420",
           "#291E3E",
-          "#463B5E",
+          "#5E4B40",
           "#655A7F",
           "#867BA2",
           "#A99DC6",
@@ -71,7 +71,7 @@
       "sugar": {
         "role": "neutral",
         "displayName": "Sugar",
-        "canonical": "#FFFCFB",
+        "canonical": "#FBF7F0",
         "oklch": "oklch(99.3% 0.003 39.5)",
         "tonalRamp": [
           "#0D0B0A",
@@ -90,7 +90,7 @@
       "placeholder": {
         "role": "neutral",
         "displayName": "Placeholder Plum",
-        "canonical": "#6A5F80",
+        "canonical": "#7C6C62",
         "oklch": "oklch(50.9% 0.053 299.8)",
         "tonalRamp": [
           "#0F051E",
@@ -106,7 +106,7 @@
       "rose": {
         "role": "paste",
         "displayName": "Rose Paste",
-        "canonical": "#F8D8DC",
+        "canonical": "#F1E6D5",
         "oklch": "oklch(91.0% 0.036 9.3)",
         "tonalRamp": [
           "#170508",
@@ -126,7 +126,7 @@
       "butter": {
         "role": "paste",
         "displayName": "Butter Paste",
-        "canonical": "#FBEBB6",
+        "canonical": "#E8DAC2",
         "oklch": "oklch(94.0% 0.070 93.3)",
         "tonalRamp": [
           "#100A00",
@@ -146,7 +146,7 @@
       "pistachio": {
         "role": "paste",
         "displayName": "Pistachio Paste",
-        "canonical": "#DDEBCD",
+        "canonical": "#E6E1D3",
         "oklch": "oklch(92.2% 0.043 127.7)",
         "tonalRamp": [
           "#060E00",
@@ -166,7 +166,7 @@
       "rose-gel": {
         "role": "gel-ring",
         "displayName": "Rose Gel",
-        "canonical": "#E08595",
+        "canonical": "#B89478",
         "oklch": "oklch(71.8% 0.113 9.0)",
         "tonalRamp": [
           "#200006",
@@ -182,7 +182,7 @@
       "butter-gel": {
         "role": "gel-ring",
         "displayName": "Butter Gel",
-        "canonical": "#DDAF3F",
+        "canonical": "#C29E62",
         "oklch": "oklch(77.6% 0.136 85.8)",
         "tonalRamp": [
           "#120A00",
@@ -198,7 +198,7 @@
       "pistachio-gel": {
         "role": "gel-ring",
         "displayName": "Pistachio Gel",
-        "canonical": "#8DB272",
+        "canonical": "#9E9780",
         "oklch": "oklch(72.0% 0.097 132.8)",
         "tonalRamp": [
           "#040F00",
@@ -206,7 +206,7 @@
           "#2C4C0C",
           "#4B6D2F",
           "#6B8F50",
-          "#8DB272",
+          "#9E9780",
           "#B1D795",
           "#D5FDBA"
         ]
@@ -214,7 +214,7 @@
       "line": {
         "role": "neutral",
         "displayName": "Paste Line",
-        "canonical": "rgba(46,36,70,.14)"
+        "canonical": "rgba(59,42,33,.14)"
       }
     },
     "typographyMeta": {
@@ -250,32 +250,32 @@
     "shadows": [
       {
         "name": "lift",
-        "value": "0 22px 44px -26px rgba(46,36,70,.38), 0 3px 8px -4px rgba(46,36,70,.12)",
+        "value": "0 22px 44px -26px rgba(59,42,33,.38), 0 3px 8px -4px rgba(59,42,33,.12)",
         "purpose": "The only elevation: a slab or object that overlaps or floats."
       },
       {
         "name": "crumb",
-        "value": "0 6px 14px -10px rgba(46,36,70,.6)",
+        "value": "0 6px 14px -10px rgba(59,42,33,.6)",
         "purpose": "Tags and gallery tile names."
       },
       {
         "name": "pot-drop",
-        "value": "0 8px 16px -10px rgba(46,36,70,.5)",
+        "value": "0 8px 16px -10px rgba(59,42,33,.5)",
         "purpose": "Under colour pots."
       },
       {
         "name": "berry-glow",
-        "value": "0 12px 24px -14px rgba(178,42,71,.7)",
+        "value": "0 12px 24px -14px rgba(126,78,49,.7)",
         "purpose": "Under the gel button only."
       },
       {
         "name": "focus-field",
-        "value": "inset 0 0 0 2px #B22A47, 0 0 0 4px rgba(178,42,71,.15)",
+        "value": "inset 0 0 0 2px #7E4E31, 0 0 0 4px rgba(126,78,49,.15)",
         "purpose": "Focused text fields."
       },
       {
         "name": "pot-selected",
-        "value": "inset 0 0 0 5px var(--g), 0 0 0 3px #FFFCFB, 0 0 0 5.5px #2E2446",
+        "value": "inset 0 0 0 5px var(--g), 0 0 0 3px #FBF7F0, 0 0 0 5.5px #3B2A21",
         "purpose": "Selected colour pot."
       }
     ],
@@ -392,7 +392,7 @@
       "refersTo": "button-gel",
       "description": "Primary action pill in berry; \"Beställ tårta\".",
       "html": "<button class=\"ds-btn ds-btn-gel\">Beställ tårta <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--text);border-radius:999px;padding:1em 1.5em;border:2px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)} .ds-btn svg{transition:transform .3s var(--ease)} .ds-btn:hover svg{transform:translateX(3px)} .ds-btn:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-btn-gel{background:var(--berry);color:var(--sugar);box-shadow:0 12px 24px -14px rgba(178,42,71,.7)} .ds-btn-gel:hover{background:var(--berry-deep);transform:translateY(-2px)}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--text);border-radius:999px;padding:1em 1.5em;border:2px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)} .ds-btn svg{transition:transform .3s var(--ease)} .ds-btn:hover svg{transform:translateX(3px)} .ds-btn:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-btn-gel{background:var(--berry);color:var(--sugar);box-shadow:0 12px 24px -14px rgba(126,78,49,.7)} .ds-btn-gel:hover{background:var(--berry-deep);transform:translateY(-2px)}"
     },
     {
       "name": "Line Button",
@@ -400,7 +400,7 @@
       "refersTo": "button-line",
       "description": "Secondary pill with plum outline; fills plum on hover.",
       "html": "<button class=\"ds-btn ds-btn-line\">Se alla tårtor</button>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--text);border-radius:999px;padding:1em 1.5em;border:2px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease)} .ds-btn:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-btn-line{background:transparent;color:var(--plum);border-color:var(--plum)} .ds-btn-line:hover{background:var(--plum);color:var(--sugar)}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--text);border-radius:999px;padding:1em 1.5em;border:2px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease)} .ds-btn:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-btn-line{background:transparent;color:var(--plum);border-color:var(--plum)} .ds-btn-line:hover{background:var(--plum);color:var(--sugar)}"
     },
     {
       "name": "Paste-Pill Nav Tabs",
@@ -408,7 +408,7 @@
       "refersTo": "nav-tab",
       "description": "Each tab in its page paste; current page gets a gel ring; Beställ is always berry.",
       "html": "<ul class=\"ds-tabs\"><li style=\"--c:var(--rose);--g:var(--rose-gel)\"><a href=\"#\" aria-current=\"page\">Tårtor</a></li><li style=\"--c:var(--butter);--g:var(--butter-gel)\"><a href=\"#\">Smaker &amp; priser</a></li><li style=\"--c:var(--pistachio);--g:var(--pistachio-gel)\"><a href=\"#\">Om Fiona</a></li><li style=\"--c:var(--rose);--g:var(--rose-gel)\"><a href=\"#\">Frågor</a></li><li><a href=\"#\" class=\"ds-tab-order\">Beställ</a></li></ul>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-tabs{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;font-family:var(--text)} .ds-tabs a{display:block;text-decoration:none;color:var(--plum);font-weight:500;font-size:.96rem;line-height:1;padding:.8em 1.15em;border-radius:999px;background:var(--c,var(--sugar));transition:box-shadow .25s var(--ease),transform .25s var(--ease)} .ds-tabs a:hover{box-shadow:inset 0 0 0 2px var(--g);transform:translateY(-1px)} .ds-tabs a[aria-current=page]{box-shadow:inset 0 0 0 2.5px var(--g);font-weight:700} .ds-tabs a:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-tabs .ds-tab-order{background:var(--berry);color:var(--sugar);font-weight:600} .ds-tabs .ds-tab-order:hover{background:var(--berry-deep);box-shadow:none}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-tabs{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;font-family:var(--text)} .ds-tabs a{display:block;text-decoration:none;color:var(--plum);font-weight:500;font-size:.96rem;line-height:1;padding:.8em 1.15em;border-radius:999px;background:var(--c,var(--sugar));transition:box-shadow .25s var(--ease),transform .25s var(--ease)} .ds-tabs a:hover{box-shadow:inset 0 0 0 2px var(--g);transform:translateY(-1px)} .ds-tabs a[aria-current=page]{box-shadow:inset 0 0 0 2.5px var(--g);font-weight:700} .ds-tabs a:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-tabs .ds-tab-order{background:var(--berry);color:var(--sugar);font-weight:600} .ds-tabs .ds-tab-order:hover{background:var(--berry-deep);box-shadow:none}"
     },
     {
       "name": "Colour Pots",
@@ -416,7 +416,7 @@
       "refersTo": "colour-pot",
       "description": "Signature occasion swatch-controls; paste fill, gel ring, plum selection ring.",
       "html": "<ul class=\"ds-pots\"><li><button class=\"ds-pot\" style=\"--c:var(--rose);--g:var(--rose-gel)\" aria-pressed=\"true\"><i></i>Bröllop</button></li><li><button class=\"ds-pot\" style=\"--c:var(--rose);--g:var(--rose-gel)\" aria-pressed=\"false\"><i></i>Sockerblommor</button></li><li><button class=\"ds-pot\" style=\"--c:var(--butter);--g:var(--butter-gel)\" aria-pressed=\"false\"><i></i>Barnkalas &amp; dop</button></li><li><button class=\"ds-pot\" style=\"--c:var(--butter);--g:var(--butter-gel)\" aria-pressed=\"false\"><i></i>Födelsedag</button></li><li><button class=\"ds-pot\" style=\"--c:var(--pistachio);--g:var(--pistachio-gel)\" aria-pressed=\"false\"><i></i>Student</button></li><li><button class=\"ds-pot\" style=\"--c:var(--pistachio);--g:var(--pistachio-gel)\" aria-pressed=\"false\"><i></i>Företag &amp; event</button></li></ul>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-pots{display:flex;flex-wrap:wrap;gap:10px 18px;list-style:none;margin:0;padding:0} .ds-pot{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;padding:4px;cursor:pointer;font:500 .88rem/1.25 var(--text);color:var(--plum);text-align:center;max-width:96px} .ds-pot i{display:block;width:48px;height:48px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 5px var(--g),0 8px 16px -10px rgba(46,36,70,.5);transition:transform .35s var(--ease),box-shadow .35s var(--ease)} .ds-pot:hover i{transform:translateY(-3px)} .ds-pot[aria-pressed=true]{font-weight:700} .ds-pot[aria-pressed=true] i{box-shadow:inset 0 0 0 5px var(--g),0 0 0 3px var(--sugar),0 0 0 5.5px var(--plum)} .ds-pot:focus-visible{outline:none} .ds-pot:focus-visible i{outline:2.5px solid var(--berry);outline-offset:6px}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-pots{display:flex;flex-wrap:wrap;gap:10px 18px;list-style:none;margin:0;padding:0} .ds-pot{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;padding:4px;cursor:pointer;font:500 .88rem/1.25 var(--text);color:var(--plum);text-align:center;max-width:96px} .ds-pot i{display:block;width:48px;height:48px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 5px var(--g),0 8px 16px -10px rgba(59,42,33,.5);transition:transform .35s var(--ease),box-shadow .35s var(--ease)} .ds-pot:hover i{transform:translateY(-3px)} .ds-pot[aria-pressed=true]{font-weight:700} .ds-pot[aria-pressed=true] i{box-shadow:inset 0 0 0 5px var(--g),0 0 0 3px var(--sugar),0 0 0 5.5px var(--plum)} .ds-pot:focus-visible{outline:none} .ds-pot:focus-visible i{outline:2.5px solid var(--berry);outline-offset:6px}"
     },
     {
       "name": "Tag",
@@ -424,7 +424,7 @@
       "refersTo": "tag",
       "description": "Sugar pill with a gel dot, laid over photos.",
       "html": "<span class=\"ds-tag\" style=\"--g:var(--rose-gel)\">Sockerblommor</span> <span class=\"ds-tag\" style=\"--g:var(--butter-gel)\">Modellerade figurer</span>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-tag{display:inline-flex;align-items:center;gap:6px;background:var(--sugar);color:var(--plum);font:600 .78rem/1 var(--text);padding:.55em .8em;border-radius:999px;box-shadow:0 6px 14px -10px rgba(46,36,70,.6)} .ds-tag::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--g,var(--rose-gel))}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-tag{display:inline-flex;align-items:center;gap:6px;background:var(--sugar);color:var(--plum);font:600 .78rem/1 var(--text);padding:.55em .8em;border-radius:999px;box-shadow:0 6px 14px -10px rgba(59,42,33,.6)} .ds-tag::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--g,var(--rose-gel))}"
     },
     {
       "name": "Flavour Chip",
@@ -432,7 +432,7 @@
       "refersTo": "chip",
       "description": "Selectable pill; paste-line ring at rest, plum fill when selected.",
       "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Vanilj</button><button class=\"ds-chip\" aria-pressed=\"false\">Choklad</button><button class=\"ds-chip\" aria-pressed=\"false\">Hallon <small>+5 kr</small></button></div>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-chips{display:flex;flex-wrap:wrap;gap:8px} .ds-chip{border:0;background:var(--sugar);box-shadow:inset 0 0 0 1.5px var(--line);color:var(--plum);font:500 .95rem var(--text);padding:.65em 1em;border-radius:999px;cursor:pointer;transition:background-color .25s var(--ease),box-shadow .25s var(--ease)} .ds-chip:hover{box-shadow:inset 0 0 0 1.5px var(--plum)} .ds-chip:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-chip[aria-pressed=true]{background:var(--plum);color:var(--sugar);box-shadow:none} .ds-chip small{opacity:.75;margin-left:4px}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-chips{display:flex;flex-wrap:wrap;gap:8px} .ds-chip{border:0;background:var(--sugar);box-shadow:inset 0 0 0 1.5px var(--line);color:var(--plum);font:500 .95rem var(--text);padding:.65em 1em;border-radius:999px;cursor:pointer;transition:background-color .25s var(--ease),box-shadow .25s var(--ease)} .ds-chip:hover{box-shadow:inset 0 0 0 1.5px var(--plum)} .ds-chip:focus-visible{outline:2.5px solid var(--berry);outline-offset:3px} .ds-chip[aria-pressed=true]{background:var(--plum);color:var(--sugar);box-shadow:none} .ds-chip small{opacity:.75;margin-left:4px}"
     },
     {
       "name": "Paste Slab with Lifted Overlap",
@@ -440,7 +440,7 @@
       "refersTo": "slab",
       "description": "The container: a paste slab, with a second slab overlapping and lifted. No boxed cards.",
       "html": "<div class=\"ds-stage\"><div class=\"ds-slab\" style=\"--c:var(--rose)\"><h3>Tårtor för bröllop, kalas och allt däremellan</h3><p>60 kr per bit. Beställ minst två veckor innan.</p></div><div class=\"ds-slab ds-lift\" style=\"--c:var(--pistachio)\"><div class=\"ds-inner\"></div></div></div>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-stage{display:grid;grid-template-columns:repeat(12,1fr);font:400 17px/1.65 var(--text);color:var(--plum)} .ds-slab{background:var(--c);border-radius:var(--r-slab);padding:clamp(24px,5vw,48px)} .ds-stage>.ds-slab:first-child{grid-column:1/span 8;grid-row:1;padding-right:18%} .ds-slab h3{font:400 clamp(1.6rem,3vw,2.4rem)/1.02 var(--display);letter-spacing:-.015em;margin:0 0 12px} .ds-slab p{margin:0} .ds-lift{grid-column:7/span 6;grid-row:1;margin-top:64px;padding:14px;box-shadow:var(--lift);z-index:2} .ds-inner{border-radius:var(--r-inner);background:var(--sugar);aspect-ratio:4/3}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-stage{display:grid;grid-template-columns:repeat(12,1fr);font:400 17px/1.65 var(--text);color:var(--plum)} .ds-slab{background:var(--c);border-radius:var(--r-slab);padding:clamp(24px,5vw,48px)} .ds-stage>.ds-slab:first-child{grid-column:1/span 8;grid-row:1;padding-right:18%} .ds-slab h3{font:400 clamp(1.6rem,3vw,2.4rem)/1.02 var(--display);letter-spacing:-.015em;margin:0 0 12px} .ds-slab p{margin:0} .ds-lift{grid-column:7/span 6;grid-row:1;margin-top:64px;padding:14px;box-shadow:var(--lift);z-index:2} .ds-inner{border-radius:var(--r-inner);background:var(--sugar);aspect-ratio:4/3}"
     },
     {
       "name": "Text Field",
@@ -448,14 +448,14 @@
       "refersTo": "input",
       "description": "Sugar field with hairline ring; berry ring and halo on focus.",
       "html": "<label class=\"ds-field\"><span>Datum</span><input placeholder=\"t.ex. 14 juni\"></label>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-field{display:grid;gap:8px;font:700 1rem var(--text);color:var(--plum);max-width:320px} .ds-field input{font:500 1rem var(--text);color:var(--plum);background:var(--sugar);border:0;border-radius:14px;padding:.9em 1em;box-shadow:inset 0 0 0 1.5px rgba(46,36,70,.12);transition:box-shadow .2s} .ds-field input:hover{box-shadow:inset 0 0 0 1.5px rgba(46,36,70,.3)} .ds-field input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--berry),0 0 0 4px rgba(178,42,71,.15)} .ds-field input::placeholder{color:#6A5F80}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-field{display:grid;gap:8px;font:700 1rem var(--text);color:var(--plum);max-width:320px} .ds-field input{font:500 1rem var(--text);color:var(--plum);background:var(--sugar);border:0;border-radius:14px;padding:.9em 1em;box-shadow:inset 0 0 0 1.5px rgba(59,42,33,.12);transition:box-shadow .2s} .ds-field input:hover{box-shadow:inset 0 0 0 1.5px rgba(59,42,33,.3)} .ds-field input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--berry),0 0 0 4px rgba(126,78,49,.15)} .ds-field input::placeholder{color:#7C6C62}"
     },
     {
       "name": "Estimate Numeral",
       "kind": "custom",
       "description": "Caprasimo tabular price that ticks (520ms expo-out) as inputs change.",
       "html": "<div class=\"ds-big\">1 800<small>kr</small></div>",
-      "css": ":host{--sugar:#FFFCFB;--rose:#F8D8DC;--butter:#FBEBB6;--pistachio:#DDEBCD;--rose-gel:#E08595;--butter-gel:#DDAF3F;--pistachio-gel:#8DB272;--plum:#2E2446;--plum-soft:#463B5E;--berry:#B22A47;--berry-deep:#8E1C36;--line:rgba(46,36,70,.14);--lift:0 22px 44px -26px rgba(46,36,70,.38),0 3px 8px -4px rgba(46,36,70,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-big{font:400 clamp(3rem,6vw,4.6rem)/.95 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--plum)} .ds-big small{font:600 1rem var(--text);letter-spacing:0;margin-left:.3em;color:var(--plum-soft)}"
+      "css": ":host{--sugar:#FBF7F0;--rose:#F1E6D5;--butter:#E8DAC2;--pistachio:#E6E1D3;--rose-gel:#B89478;--butter-gel:#C29E62;--pistachio-gel:#9E9780;--plum:#3B2A21;--plum-soft:#5E4B40;--berry:#7E4E31;--berry-deep:#613A23;--line:rgba(59,42,33,.14);--lift:0 22px 44px -26px rgba(59,42,33,.38),0 3px 8px -4px rgba(59,42,33,.12);--ease:cubic-bezier(.16,1,.3,1);--display:'Caprasimo','Cooper Black',Georgia,serif;--text:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;--r-slab:clamp(22px,3vw,40px);--r-inner:clamp(16px,2vw,26px)} .ds-big{font:400 clamp(3rem,6vw,4.6rem)/.95 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--plum)} .ds-big small{font:600 1rem var(--text);letter-spacing:0;margin-left:.3em;color:var(--plum-soft)}"
     }
   ],
   "narrative": {

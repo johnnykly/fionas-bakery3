@@ -2,19 +2,19 @@
 name: Fiona's Bakery
 description: Färgburkarna – a sugarpaste world of rolled paste slabs, deep gel ink and occasion colour pots.
 colors:
-  berry: "#B22A47"
-  berry-deep: "#8E1C36"
-  plum: "#2E2446"
-  plum-soft: "#463B5E"
-  sugar: "#FFFCFB"
-  rose: "#F8D8DC"
-  butter: "#FBEBB6"
-  pistachio: "#DDEBCD"
-  rose-gel: "#E08595"
-  butter-gel: "#DDAF3F"
-  pistachio-gel: "#8DB272"
-  line: "rgba(46,36,70,.14)"
-  placeholder: "#6A5F80"
+  berry: "#7E4E31"
+  berry-deep: "#613A23"
+  plum: "#3B2A21"
+  plum-soft: "#5E4B40"
+  sugar: "#FBF7F0"
+  rose: "#F1E6D5"
+  butter: "#E8DAC2"
+  pistachio: "#E6E1D3"
+  rose-gel: "#B89478"
+  butter-gel: "#C29E62"
+  pistachio-gel: "#9E9780"
+  line: "rgba(59,42,33,.14)"
+  placeholder: "#7C6C62"
 typography:
   display:
     fontFamily: "Caprasimo, Cooper Black, Georgia, serif"
@@ -234,10 +234,10 @@ At ≤900px, grids collapse to one column; overlapping photo slabs move below th
 Depth is overlap plus one lift. Slabs are flat at rest; a slab or photo that sits over another receives the lift shadow, a long, soft, plum-tinted drop. Small objects (pots, tags, tile names, layers) carry a miniature version of the same drop. Hover moves things up 1–3px; it does not add new shadows.
 
 ### Shadow Vocabulary
-- **Lift** (`box-shadow: 0 22px 44px -26px rgba(46,36,70,.38), 0 3px 8px -4px rgba(46,36,70,.12)`): overlapping photo slabs, the sugar meter and summary slabs, the menu button, lightbox controls, the cake plate.
-- **Crumb** (`0 6px 14px -10px rgba(46,36,70,.6)`): tags and gallery tile names.
-- **Pot drop** (`0 8px 16px -10px rgba(46,36,70,.5)`): under colour pots.
-- **Berry glow** (`0 12px 24px -14px rgba(178,42,71,.7)`): under the gel button only.
+- **Lift** (`box-shadow: 0 22px 44px -26px rgba(59,42,33,.38), 0 3px 8px -4px rgba(59,42,33,.12)`): overlapping photo slabs, the sugar meter and summary slabs, the menu button, lightbox controls, the cake plate.
+- **Crumb** (`0 6px 14px -10px rgba(59,42,33,.6)`): tags and gallery tile names.
+- **Pot drop** (`0 8px 16px -10px rgba(59,42,33,.5)`): under colour pots.
+- **Berry glow** (`0 12px 24px -14px rgba(126,78,49,.7)`): under the gel button only.
 
 ### Named Rules
 **The Only Lift Rule.** The lift shadow means "this sits on top of something". Never put it on a slab that does not overlap or float, and never use borders or boxed cards to create hierarchy.
