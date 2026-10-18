@@ -3,7 +3,7 @@
   site/     production static site: one full HTML document per page + css/js/img
   preview/  single-file preview (all pages hash-routed) for the Artifact link
 """
-import json, re, shutil, pathlib
+import json, re, shutil, pathlib, hashlib
 from pages import PAGES, ICON, FAQ_ITEMS
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -11,6 +11,9 @@ SRC = ROOT / 'src'
 CSS = (SRC / 'style.css').read_text(encoding='utf-8')
 DIMS = json.loads((SRC / 'img-dims.json').read_text())
 JS = (SRC / 'main.js').read_text(encoding='utf-8').replace('__DIMS__', json.dumps(DIMS))
+# Short content hashes so browsers fetch fresh JS/CSS after every change (Pages caches files ~10 min)
+VER_JS = hashlib.md5(JS.encode('utf-8')).hexdigest()[:8]
+VER_CSS = hashlib.md5(CSS.encode('utf-8')).hexdigest()[:8]
 BASE = 'https://fionasbakery.se/'
 FONTS = '<link rel="preload" href="fonts/caprasimo.woff2" as="font" type="font/woff2" crossorigin>'
 
@@ -103,7 +106,7 @@ def build_site():
 <meta name="theme-color" content="#F6EEE1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='30' r='26' fill='%23F8D8DC'/%3E%3Cpath d='M31.5 25.5c1.8-1.6 4.6-.6 4.7 1.8.1 2.6-3 4.2-5.6 3.2-3.2-1.2-3.6-5.6-1.2-8 3-3 8.4-2.6 10.8.8 2.8 4 1.2 9.8-3.2 12-4.8 2.4-11 .4-13.2-4.4-2.2-4.8 0-10.6 4.8-13M22.4 22.6c-4.2 4.6-4.6 12-.8 16.8 4.2 5.4 12.4 6.6 18 2.6 5.6-4 7-12 3.4-17.8' fill='none' stroke='%23B22A47' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 {FONTS}
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v={VER_CSS}">
 {extra}
 </head>
 <body>
@@ -113,7 +116,7 @@ def build_site():
 {resolve(body, link)}
 </main>
 {footer(link)}
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v={VER_JS}" defer></script>
 </body>
 </html>
 '''
