@@ -17,14 +17,14 @@ Static HTML/CSS (+ small vanilla JS), real separate pages per route (/, /tartor,
 Their job: see that Fiona can make *their* idea, understand price and lead time, and send an inquiry.
 
 ## Product Purpose
-Fiona's Bakery is a one-person, made-to-order konditori in Arlöv run by Fiona Hua. The site exists to turn visitors into custom-cake inquiries. Success = more well-specified inquiries (occasion, date, servings, flavours, idea) arriving by email/phone.
+Fiona's Bakery is a one-person, made-to-order konditori in Arlöv run by Fiona. The site exists to turn visitors into custom-cake inquiries. Success = more well-specified inquiries (occasion, date, servings, flavours, idea) arriving by email/phone.
 
 ## Positioning
 Fiona is both a konditor and a sugar-flower/sugarpaste artist: hand-made sugar flowers and hand-modelled figures on cakes baked to order, at a transparent per-slice price (60 kr/bit). Range spans romantic sugar-flower wedding tiers and bold themed/sculpted party cakes from the same hands.
 
 ## Operating Context
 - Orders by inquiry → conversation (inspiration photos by email) → quote → Företagsswish payment → pickup.
-- Pickup at Trossgatan 25, 232 36 Arlöv. Serves primarily Malmö and Lund (roughly 15 km radius of Arlöv), depending on availability. Delivery on request (not guaranteed).
+- Pickup at Trossgatan 25, 232 36 Arlöv. Sells to everyone regardless of location, depending on availability. Delivery possible at an extra cost depending on distance.
 - Lead time: decorated cakes 1–2 weeks; sugar-flower cakes preferably 1 month. Rush orders sometimes possible.
 - Instagram @fionasbakery is the living portfolio; seasonal closures (e.g. summer weeks) announced there.
 

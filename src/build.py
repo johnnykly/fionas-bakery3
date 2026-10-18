@@ -28,9 +28,8 @@ BAKERY_LD = {
  "description":"Konditori i Arlöv som bakar tårtor på beställning: bröllopstårtor med handgjorda sockerblommor, barntårtor, födelsedagstårtor, studenttårtor, cupcakes och cakepops.",
  "url":BASE,"telephone":"+46738740378","email":"kontakt@fionasbakery.se",
  "image":BASE+"img/39.jpg",
- "founder":{"@type":"Person","name":"Fiona Hua","jobTitle":"Konditor och sockerblomsdesigner"},
+ "founder":{"@type":"Person","name":"Fiona","jobTitle":"Konditor och sockerblomsdesigner"},
  "address":{"@type":"PostalAddress","streetAddress":"Trossgatan 25","postalCode":"232 36","addressLocality":"Arlöv","addressRegion":"Skåne län","addressCountry":"SE"},
- "areaServed":[{"@type":"City","name":n} for n in ["Malmö","Lund","Arlöv","Burlöv"]],
  "priceRange":"60 kr/bit","paymentAccepted":"Swish","sameAs":["https://www.instagram.com/fionasbakery/"],
 }
 FAQ_LD = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -56,9 +55,9 @@ def footer(link):
   <div class="slab">
     <div>
       <a class="brand" href="{link('hem')}">{LOGO}<span><b>Fiona's Bakery</b><small>Konditori i Arlöv</small></span></a>
-      <p style="margin-top:14px;max-width:26em">Tårtor på beställning för Malmö, Lund och Burlöv, ungefär 15 km runt Arlöv, i mån av tid.</p>
+      <p style="margin-top:14px;max-width:26em">Tårtor på beställning, bakade i Arlöv. Leverans går att ordna mot en extra kostnad beroende på avstånd.</p>
     </div>
-    <div><h2>Kontakt &amp; hämtning</h2><p><a href="tel:+46738740378">073-874 03 78</a><br><a href="mailto:kontakt@fionasbakery.se">kontakt@fionasbakery.se</a><br>Trossgatan 25, 232 36 Arlöv<br>Hämtning enligt överenskommelse, leverans på förfrågan<br><a href="https://www.instagram.com/fionasbakery/" rel="noopener" target="_blank">Instagram @fionasbakery</a></p></div>
+    <div><h2>Kontakt &amp; hämtning</h2><p><a href="tel:+46738740378">073-874 03 78</a><br><a href="mailto:kontakt@fionasbakery.se">kontakt@fionasbakery.se</a><br>Trossgatan 25, 232 36 Arlöv<br>Hämtning enligt överenskommelse<br>Leverans mot extra kostnad beroende på avstånd<br><a href="https://www.instagram.com/fionasbakery/" rel="noopener" target="_blank">Instagram @fionasbakery</a></p></div>
     <div><h2>Sidor</h2><p>{'<br>'.join(f'<a href="{link(s)}">{label}</a>' for s,_,label,*_ in PAGES if s!='hem')}</p></div>
     <p class="fine"><span>© 2026 Fiona's Bakery</span><span>Godkänd för F-skatt, betalning med Företagsswish</span></p>
   </div>

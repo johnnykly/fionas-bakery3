@@ -84,7 +84,7 @@ HEM = f'''
 <section class="wrap close" aria-labelledby="close-h">
   <div class="slab c-pistachio">
     <h2 id="close-h">Berätta om er dag, så bakar Fiona tårtan</h2>
-    <p class="lede">Designtårtor beställs 1-2 veckor i förväg, tårtor med sockerblommor gärna en månad innan. Hämtas i Arlöv, leverans på förfrågan.</p>
+    <p class="lede">Designtårtor beställs 1-2 veckor i förväg, tårtor med sockerblommor gärna en månad innan. Hämtas i Arlöv, och leverans kan ordnas, men då tillkommer en extra kostnad beroende på avstånd.</p>
     <div class="acts"><a class="btn btn-gel" href="@bestall">Beställ tårta {A}</a><a class="btn btn-line" href="tel:+46738740378">Ring 073-874 03 78</a></div>
   </div>
 </section>
@@ -95,7 +95,7 @@ TARTOR = f'''
   <div class="slab" id="tartorHead" style="--c:var(--rose)">
     <div>
       <h1>Våra tårtor</h1>
-      <p class="lede measure" style="margin-top:16px">Bröllopstårtor, barntårtor, studenttårtor och tårtor med handgjorda sockerblommor, bakade i Arlöv för kunder i Malmö, Lund och Burlöv.</p>
+      <p class="lede measure" style="margin-top:16px">Bröllopstårtor, barntårtor, studenttårtor och tårtor med handgjorda sockerblommor, bakade i Arlöv.</p>
     </div>
     <p class="num" id="count" aria-live="polite" style="font-weight:600;justify-self:end">36 tårtor</p>
     <ul class="pots filters" id="filters" aria-label="Visa tårtor för" style="grid-column:1/-1"></ul>
@@ -190,9 +190,9 @@ OM = f'''
     <img src="img/35.jpg" alt="Blå ros i socker på en tårta" loading="lazy">
   </div>
   <div class="text measure">
-    <p class="lede" style="color:var(--plum)">Fiona Hua driver Fiona's Bakery i Arlöv. Hon bakar skräddarsydda tårtor för bröllop, födelsedagar, dop och babyshowers, och trendiga bakelser som cakepops, popsicles, cupcakes och macarons.</p>
+    <p class="lede" style="color:var(--plum)">Fiona driver Fiona's Bakery i Arlöv. Hon bakar skräddarsydda tårtor för bröllop, födelsedagar, dop och babyshowers, och trendiga bakelser som cakepops, popsicles, cupcakes och macarons.</p>
     <p>Sockerblommorna är hennes signatur. Varje kronblad kavlas, formas och färgas för hand och får torka innan det sätts på tårtan, därför behöver de lite extra tid. Figurerna i sockerpasta, från nallar till Super Mario, modelleras på samma sätt.</p>
-    <p>Fiona bakar främst för Malmö, Lund och Burlöv, ungefär 15 km runt Arlöv, i mån av tid. Tårtan hämtas i Arlöv och leverans kan ordnas på förfrågan.</p>
+    <p>Fiona bakar för alla, oavsett var du bor, i mån av tid. Tårtan hämtas i Arlöv, och leverans kan ordnas, men då tillkommer en extra kostnad beroende på avstånd.</p>
   </div>
  </div>
 </section>
@@ -213,7 +213,6 @@ OM = f'''
 FAQ_ITEMS = [
  ('Hur långt i förväg behöver jag beställa tårta?', 'Designtårtor minst 1-2 veckor innan, tårtor med sockerblommor gärna en månad i förväg. Är det bråttom går det ofta att lösa, så hör av dig ändå.', 'rose'),
  ('Vad kostar en tårta eller bröllopstårta?', 'Grundpriset är 60 kr per bit. Pistage- eller nougatmousse kostar 5 kr extra per bit. Dekorationen prissätts efter antal detaljer och hur avancerade de är, och du får alltid en offert först.', 'butter'),
- ('Var hämtar jag tårtan? Levererar ni i Malmö och Lund?', 'Tårtan hämtas på Trossgatan 25 i Arlöv. Fiona bakar främst för Malmö, Lund och Burlöv, ungefär 15 km runt Arlöv, i mån av tid. Leverans kan ordnas på förfrågan.', 'rose'),
  ('Kan jag skicka inspirationsbilder?', 'Ja, gärna. Skicka först din förfrågan. När Fiona svarar kan du bifoga bilder på hur du vill att tårtan ska se ut.', 'pistachio'),
  ('Hur betalar jag?', 'Med Företagsswish. Fiona\'s Bakery är godkänt för F-skatt, vilket gör det enkelt för företag att beställa.', 'butter'),
  ('Kan ni ta hänsyn till allergier?', 'Skriv om allergier och specialkost i förfrågan, så berättar Fiona vilka alternativ som går att göra.', 'rose'),
@@ -280,7 +279,7 @@ BESTALL = f'''
       </div>
       <div class="fs field">
         <label class="lbl" for="pickup">Hämtning</label>
-        <select id="pickup"><option>Hämtar i Arlöv</option><option>Önskar leverans (på förfrågan)</option></select>
+        <select id="pickup"><option>Hämtar i Arlöv</option><option>Önskar leverans (extra kostnad beroende på avstånd)</option></select>
       </div>
       <div class="fs row2">
         <div class="field" id="w-name"><label class="lbl" for="name">Namn</label><input id="name" autocomplete="name" aria-required="true" aria-describedby="errors"></div>
@@ -333,11 +332,11 @@ PAGES = [
  ('hem', 'index', 'Hem', "Tårtor på beställning i Malmö & Arlöv | Fiona's Bakery",
   "Beställ tårta i Malmö och Arlöv. Bröllopstårtor med handgjorda sockerblommor, barntårtor, födelsedagstårtor, studenttårtor och cupcakes med logga. Från 60 kr/bit.", HEM),
  ('tartor', 'tartor', 'Tårtor', "Bröllopstårtor, barntårtor & studenttårtor | Fiona's Bakery",
-  "Bilder på bröllopstårtor med sockerblommor, barntårtor med figurer, studenttårtor och bakelser från Fiona's Bakery i Arlöv, för Malmö och Lund.", TARTOR),
+  "Bilder på bröllopstårtor med sockerblommor, barntårtor med figurer, studenttårtor och bakelser från Fiona's Bakery i Arlöv.", TARTOR),
  ('smaker', 'smaker-priser', 'Smaker & priser', "Smaker & priser: tårta från 60 kr/bit | Fiona's Bakery",
   "Välj vanilj- eller chokladbotten och två moussefyllningar. Tårta 60 kr/bit, cakepops och macarons 25 kr/st, bakelser 45 kr/st.", SMAKER),
  ('om', 'om-fiona', 'Om Fiona', "Om Fiona: konditor & sockerblomsdesigner i Arlöv | Fiona's Bakery",
-  "Fiona Hua är konditor och sockerblomsdesigner i Arlöv. Så beställer du en tårta, från förfrågan till hämtning.", OM),
+  "Fiona är konditor och sockerblomsdesigner i Arlöv. Så beställer du en tårta, från förfrågan till hämtning.", OM),
  ('fragor', 'fragor', 'Frågor', "Frågor om tårtbeställning | Fiona's Bakery",
   "Hur långt i förväg beställer man tårta, vad kostar det och var hämtas den? Svar på vanliga frågor om att beställa tårta i Malmö och Arlöv.", FRAGOR),
  ('bestall', 'bestall', 'Beställ tårta', "Beställ tårta: Malmö, Lund & Arlöv | Fiona's Bakery",
