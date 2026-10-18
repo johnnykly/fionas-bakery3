@@ -6,6 +6,11 @@
   const wh = k => DIMS[k] ? `width="${DIMS[k][0]}" height="${DIMS[k][1]}"` : '';
   const kr = n => n.toLocaleString('sv-SE') + ' kr';
   const PRICE = 60;
+  /* Antal bitar: minst 8, jämna tal eller tal som slutar på 5 (15, 25, 35 …) */
+  const MIN_N = 8, MAX_N = 400;
+  const okN = n => n >= MIN_N && n <= MAX_N && (n % 2 === 0 || n % 10 === 5);
+  const stepN = (n, d) => { n = Math.min(MAX_N, Math.max(MIN_N - 1, n)); do { n += d; } while (n > MIN_N && n < MAX_N && !okN(n)); return Math.min(MAX_N, Math.max(MIN_N, n)); };
+  const snapN = n => { n = Math.round(n) || MIN_N; if (n <= MIN_N) return MIN_N; if (n >= MAX_N) return MAX_N; if (okN(n)) return n; return okN(n + 1) ? n + 1 : n - 1; };
 
   /* ---------- shared order state (survives page changes) ---------- */
   const store = (() => {
@@ -104,7 +109,7 @@
   if (guests) {
     const out = $('#guestsKr'), n = $('#guestsN'), go = $('#guestsGo');
     const upd = () => {
-      const v = +guests.value;
+      const v = snapN(+guests.value); guests.value = v;
       guests.style.setProperty('--p', ((v - guests.min) / (guests.max - guests.min) * 100) + '%');
       tick(out, v * PRICE); n.textContent = v;
       go.querySelector('span').textContent = `Beställ för ${v} personer`;
@@ -208,7 +213,7 @@
 
   const restore = () => {
     const occ = store.get('occ'); if (occ) { const r = form.querySelector(`input[name=occ][value="${occ}"]`); if (r) r.checked = true; }
-    if (store.get('servings')) f('servings').value = store.get('servings');
+    if (store.get('servings')) f('servings').value = snapN(+store.get('servings'));
     if (store.get('base')) f('base').value = store.get('base');
     if (store.get('m1')) f('m1').value = store.get('m1');
     if (store.get('m2')) f('m2').value = store.get('m2');
@@ -239,17 +244,17 @@
   form.addEventListener('change', e => {
     if (e.target.name === 'occ') store.set('occ', e.target.value);
     if (['base','m1','m2'].includes(e.target.id)) store.set(e.target.id, e.target.value);
-    if (e.target.id === 'servings') store.set('servings', +e.target.value);
+    if (e.target.id === 'servings') { e.target.value = snapN(parseInt(e.target.value, 10)); store.set('servings', +e.target.value); update(); }
   });
   $$('.stepper button').forEach(b => b.addEventListener('click', () => {
-    const i = f('servings'); i.value = Math.min(400, Math.max(4, (parseInt(i.value, 10) || 0) + +b.dataset.d));
+    const i = f('servings'); i.value = stepN(parseInt(i.value, 10) || MIN_N, +b.dataset.d);
     store.set('servings', +i.value); update();
   }));
 
   const rules = [
     ['occ', () => form.querySelector('input[name=occ]:checked'), 'Vilket tillfälle tårtan är till'],
     ['date', () => f('date').value && days() >= 0, 'Ett datum som inte redan har varit'],
-    ['servings', () => parseInt(f('servings').value, 10) >= 4, 'Hur många personer (minst 4)'],
+    ['servings', () => okN(parseInt(f('servings').value, 10)), 'Antal bitar: minst 8, jämnt antal eller 15, 25, 35 …'],
     ['wish', () => f('wish').value.trim().length >= 5, 'Några ord om hur tårtan ska se ut'],
     ['name', () => f('name').value.trim(), 'Ditt namn'],
     ['phone', () => f('phone').value.replace(/\D/g,'').length >= 7, 'Ett telefonnummer Fiona kan nå dig på'],

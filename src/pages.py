@@ -259,7 +259,7 @@ BESTALL = f'''
           <label class="lbl" for="servings">Antal bitar</label>
           <div class="stepper">
             <button type="button" data-d="-1" aria-label="En bit färre">{ICON['minus']}</button>
-            <input type="number" id="servings" min="4" max="400" value="30" inputmode="numeric" aria-required="true" aria-describedby="errors">
+            <input type="number" id="servings" min="8" max="400" value="30" inputmode="numeric" aria-required="true" aria-describedby="errors">
             <button type="button" data-d="1" aria-label="En bit fler">{ICON['plus']}</button>
           </div>
         </div>
