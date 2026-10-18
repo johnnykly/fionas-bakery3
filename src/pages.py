@@ -320,6 +320,7 @@ BESTALL = f'''
       <span>Hellre prata direkt?</span>
       <strong><a href="tel:+46738740378">073-874 03 78</a></strong>
       <a href="mailto:kontakt@fionasbakery.se">kontakt@fionasbakery.se</a>
+      <a href="https://www.instagram.com/fionasbakery/" rel="noopener" target="_blank">Instagram @fionasbakery</a>
     </div>
   </aside>
 </div>
